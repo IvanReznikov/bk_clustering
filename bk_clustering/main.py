@@ -110,7 +110,7 @@ class BurjKhalifaClustering:
             ) = self.calculate_clusters(X, linkage_type=self.linkage)
 
         self.labels_ = list(result_dict.values())
-        self.n_clusters = len(self.labels_)
+        self.n_clusters = len(set(self.labels_))
         self.dtf_ = dtf
         self.cluster_info_ = cluster_info
         self.cluster_df_ = cluster_df

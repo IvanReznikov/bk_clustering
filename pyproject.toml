@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "bk-clustering"
+version = "0.1"
+description = "The package is the implementation of the Burj-Khalifa clustering algorithm"
+authors = ["Ivan Reznikov <ivanreznikov@gmail.com>"]
+readme = "README.md"
+packages = [{include = "bk_clustering"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+scipy = "^1.10.1"
+scikit-learn = "^1.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -61,7 +61,7 @@ def collect_all_results(
 
 # TODO: itterate kmeans through different random seeds and check if some our outliered?
 # TODO: check how the results change with number of clusters mistaken
-def run_kmeans(dataset_names: List, number_of_clusters: List, random_state: int = 0):
+def run_kmeans(dataset_names: List, number_of_clusters: List, random_state: int = 1):
     """
     Run the K-means clustering algorithm on multiple datasets and collect and save the results.
 
@@ -95,7 +95,7 @@ def run_kmeans(dataset_names: List, number_of_clusters: List, random_state: int 
 
 
 def run_kmeans_mini_batch(
-    dataset_names: List, number_of_clusters: List, random_state: int = 0
+    dataset_names: List, number_of_clusters: List, random_state: int = 1
 ):
     """
     Run the Mini-Batch K-means clustering algorithm on multiple datasets and collect and save the results.
@@ -128,7 +128,7 @@ def run_kmeans_mini_batch(
 
 
 def run_affinity_propagation(
-    dataset_names: List, number_of_clusters: List, random_state: int = 0
+    dataset_names: List, number_of_clusters: List, random_state: int = 1
 ):
     """
     Run the Affinity Propagation clustering algorithm on multiple datasets and collect and save the results.
@@ -188,9 +188,7 @@ def run_agglomerative(dataset_names: List, number_of_clusters: List):
             results, dataset_name, true_labels, model, start
         )  # Collect and store results
 
-    filename = (
-        f"./../results/agglomerative_results.json"  # Define the filename to save the results
-    )
+    filename = f"./../results/agglomerative_results.json"  # Define the filename to save the results
     load_save.save_json(results, filename)  # Save the results to a JSON file
 
 
@@ -218,7 +216,9 @@ def run_birch(dataset_names, number_of_clusters):
             results, dataset_name, true_labels, model, start
         )  # Collect and store results
 
-    filename = f"./../results/birch_results.json"  # Define the filename to save the results
+    filename = (
+        f"./../results/birch_results.json"  # Define the filename to save the results
+    )
     load_save.save_json(results, filename)  # Save the results to a JSON file
 
 
@@ -246,7 +246,9 @@ def run_dbscan(dataset_names: List, number_of_clusters: List):
             results, dataset_name, true_labels, model, start
         )  # Collect and store results
 
-    filename = f"./../results/dbscan_results.json"  # Define the filename to save the results
+    filename = (
+        f"./../results/dbscan_results.json"  # Define the filename to save the results
+    )
     load_save.save_json(results, filename)  # Save the results to a JSON file
 
 
@@ -274,9 +276,7 @@ def run_mean_shift(dataset_names: List, number_of_clusters: List):
             results, dataset_name, true_labels, model, start
         )  # Collect and store results
 
-    filename = (
-        f"./../results/mean_shift_results.json"  # Define the filename to save the results
-    )
+    filename = f"./../results/mean_shift_results.json"  # Define the filename to save the results
     load_save.save_json(results, filename)  # Save the results to a JSON file
 
 
@@ -305,7 +305,9 @@ def run_optics(dataset_names: List, number_of_clusters: List):
             results, dataset_name, true_labels, model, start
         )  # Collect and store results
 
-    filename = f"./../results/optics_results.json"  # Define the filename to save the results
+    filename = (
+        f"./../results/optics_results.json"  # Define the filename to save the results
+    )
     load_save.save_json(results, filename)  # Save the results to a JSON file
 
 
@@ -341,13 +343,14 @@ def run_spectral(dataset_names: List, number_of_clusters: List):
     load_save.save_json(results, filename)  # Save the results to a JSON file
 
 
-def run_gmm(dataset_names: List, number_of_clusters: List):
+def run_gmm(dataset_names: List, number_of_clusters: List, random_state=1):
     """
     Run the Gaussian Mixture Model (GMM) clustering algorithm on multiple datasets and collect and save the results.
 
     Args:
         dataset_names (list): A list of dataset names.
         number_of_clusters (list): A list of the number of clusters to use for each dataset.
+        random_state (int): An optional random seed for reproducibility. Default is 1.
 
     Returns:
         None
@@ -363,7 +366,9 @@ def run_gmm(dataset_names: List, number_of_clusters: List):
             X, true_labels = get_data(
                 dataset_name
             )  # Load the dataset and extract true labels
-            model = GaussianMixture(n_components=n_clusters).fit(
+            model = GaussianMixture(
+                n_components=n_clusters, random_state=random_state
+            ).fit(
                 X
             )  # Train the GMM model
             pred_labels = model.predict(X)  # Predict the cluster labels
@@ -410,7 +415,5 @@ def run_density_peak(dataset_names: List, number_of_clusters: List):
             error_results, timer() - start
         )  # Collect and store results
 
-    filename = (
-        f"./../results/density_peak_results.json"  # Define the filename to save the results
-    )
+    filename = f"./../results/density_peak_results.json"  # Define the filename to save the results
     load_save.save_json(results, filename)  # Save the results to a JSON file

@@ -1,5 +1,6 @@
 from anytree import AnyNode
 
+
 class ClusterTree:
     def __init__(self, dtf):
         self.dtf = dtf

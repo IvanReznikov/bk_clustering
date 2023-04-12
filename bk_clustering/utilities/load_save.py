@@ -5,7 +5,7 @@ from bk_clustering.utilities import preprocessing
 import ujson
 
 
-def read_arff(folder, filename, skip_columns = []):
+def read_arff(folder, filename, skip_columns=[]):
     """
     Read an ARFF file from a specified folder and filename, and preprocess the data.
 

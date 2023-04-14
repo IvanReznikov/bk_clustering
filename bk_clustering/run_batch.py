@@ -6,7 +6,6 @@ from main import BurjKhalifaClustering
 SKIP_COLUMNS_IN_DATASET = {
     ("real", "wdbc"): ["idnumber"],
     ("real", "spectrometer"): ["LRS-name"],
-    ("real", "WISDM_ar_v1.1_transformed"): ["UNIQUE_ID"],
 }
 
 
@@ -35,6 +34,7 @@ def run_multiple_datasets(
                 parent_split_ratio=parent_split_ratio,
                 min_leaves=min_leaves,
                 n_clusters=n_clusters,
+                linkage="ward",
             )
             bk_model.fit(X)
             predict_labels = bk_model.labels_
@@ -50,31 +50,20 @@ def run_multiple_datasets(
 
 def run_batch():
     skip_datasets = [
-        "water-treatment",
-        "audiology",
+        "water-treatment",  # no class
         "autos",
-        "credit.a",
-        "credit.g",  # copy of "german"
-        "cylinder.bands",
-        "eucalyptus",
-        "hepatitis",
-        "hypothyroid",
-        "mushroom",
-        "primary.tumor",
-        "sick",
-        "soybean",
-        "vote",
-        "Autism_Data",
-        "WISDM_ar_v1.1_transformed",
-        "Lymphoma",
+        "credit.a",  # duplicate dataset
+        "credit.g",  # duplicate dataset
+        "sick",  # duplicate dataset
         "golfball",  # as 1 cluster, incorrect metric definition for clustering methods
         "Colon",  # multiple duplicated column names
         "jm1",  # gmm throws error
         "KDDTest+",  # gmm throws error
         "Rice_MSC_Dataset",  # run separately
-        "click_data",  # click_data - why does it takes so long for kmeans?
+        "click_data",  # takes forever long for kmeans?
     ]
     folders = ["real", "artificial"]
+
     dataset_names = []
     for folder in folders:
         dataset_names += [
@@ -82,20 +71,17 @@ def run_batch():
             for x in os.listdir(f"./../data/{folder}")
             if x[:-5] not in skip_datasets
         ]
+
     number_of_clusters = [
         load_save.read_arff(x[0], x[1]).iloc[:, -1].nunique() for x in dataset_names
     ]
 
     # run bk_clustering
-
     """
     results = run_multiple_datasets(dataset_names)
-    filename = (
-        f"./../results/bk_clustering_results st_scaler.json"  # Define the filename to save the results
-    )
+    filename = f"./../results/bk_clustering_results.json"  # Define the filename to save the results
     load_save.save_json(results, filename)  # Save the results to a JSON file
     """
-
     # method_comparison.run_birch(dataset_names, number_of_clusters)
     # method_comparison.run_dbscan(dataset_names, number_of_clusters)
     # method_comparison.run_kmeans(dataset_names, number_of_clusters)
@@ -106,6 +92,7 @@ def run_batch():
     # method_comparison.run_affinity_propagation(dataset_names, number_of_clusters)
     # method_comparison.run_density_peak(dataset_names, number_of_clusters)
     # method_comparison.run_optics(dataset_names, number_of_clusters)
+    # method_comparison.run_hdbscan(dataset_names, number_of_clusters)
 
 
 # python3 run_batch.py

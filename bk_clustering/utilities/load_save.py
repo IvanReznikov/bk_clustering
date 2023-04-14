@@ -1,11 +1,14 @@
 import numpy as np
+import arff
 import pandas as pd
 from scipy.io import arff as scipy_arff
 from bk_clustering.utilities import preprocessing
 import ujson
 
 
-def read_arff(folder, filename, skip_columns=[]):
+def read_arff(
+    folder, filename, skip_columns=[], miss_thresh_hard=5, miss_thresh_rel=0.05
+):
     """
     Read an ARFF file from a specified folder and filename, and preprocess the data.
 
@@ -20,16 +23,35 @@ def read_arff(folder, filename, skip_columns=[]):
         # Load ARFF data using scipy_arff and create a pandas DataFrame
         data = scipy_arff.loadarff(f"../data/{folder}/{filename}.arff")
         df = pd.DataFrame(data[0])
-        df.columns = df.columns.str.lower()  # Convert column names to lowercase
+    except NotImplementedError:
+        data = []
+        for x in arff.load(f"../data/{folder}/{filename}.arff"):
+            data.append(x._data)
+        df = pd.DataFrame(data)
+        df = df[[x for x in df.columns if type(x) == str]]
+        save_column_list = []
+        for col in df.columns:
+            if df[df[col] == ""][col].count() and (
+                df[df[col] == ""][col].count() <= miss_thresh_hard
+                or df[df[col] == ""][col].count() <= miss_thresh_rel * df.shape[0]
+            ):
+                save_column_list.append(col)
+        new_idx = df[df[save_column_list] != ""][save_column_list].dropna(axis=0).index
+        if save_column_list:
+            df = df.loc[new_idx]
+        df = df[df != ""].dropna(axis=1)
+
     except FileNotFoundError:
         print(f"Dataset {folder}/{filename} not present")
         return None  # Return None if the file is not found
+    df.columns = df.columns.str.lower()  # Convert column names to lowercase
     for col in skip_columns:
         if col in df.columns:
             df.drop(col, axis=1, inplace=True)
     df = preprocessing.preprocessing(
         df
     )  # Preprocess the data using a preprocessing function
+    df = df.dropna(axis=1)
     return df  # Return the preprocessed data as a DataFrame
 
 

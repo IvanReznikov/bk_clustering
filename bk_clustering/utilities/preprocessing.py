@@ -16,6 +16,7 @@ def preprocessing(df: pd.DataFrame) -> pd.DataFrame:
     df = string_handling(df)
     df = numeric_handling(df)
     columns = [x for x in df.columns if x != "class"] + ["class"]
+    df = df.dropna(axis=1)
     return df[columns]
 
 
@@ -71,7 +72,7 @@ def string_handling(
         if not _col.isnull().all():
             df[col] = _col
 
-        # one-hot encoding
+        # dummy encoding
         if (
             create_dummy_columns
             and col != "class"

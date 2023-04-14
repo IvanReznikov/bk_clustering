@@ -8,8 +8,8 @@ import sys
 # TODO: think of a better way
 sys.setrecursionlimit(25000)
 
-#TODO: confidence of the split through sum of solidity/number of points
-#TODO: Find dataset with ground truth for mulitlabelling?
+# TODO: confidence of the split through sum of solidity/number of points
+# TODO: Find dataset with ground truth for mulitlabelling?
 
 from bk_clustering.utilities import (
     calculation_utilities,

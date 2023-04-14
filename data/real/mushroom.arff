@@ -158,7 +158,7 @@
 @attribute 'gill-size' { 'b', 'n'}
 @attribute 'gill-color' { 'b', 'e', 'g', 'h', 'k', 'n', 'o', 'p', 'r', 'u', 'w', 'y'}
 @attribute 'stalk-shape' { 'e', 't'}
-@attribute 'stalk-root' { 'b', 'c', 'e', 'r', 'u', 'z'}
+@attribute 'stalk-root' string
 @attribute 'stalk-surface-above-ring' { 'f', 'k', 's', 'y'}
 @attribute 'stalk-surface-below-ring' { 'f', 'k', 's', 'y'}
 @attribute 'stalk-color-above-ring' { 'b', 'c', 'e', 'g', 'n', 'o', 'p', 'w', 'y'}
@@ -170,7 +170,7 @@
 @attribute 'spore-print-color' { 'b', 'h', 'k', 'n', 'o', 'r', 'u', 'w', 'y'}
 @attribute 'population' { 'a', 'c', 'n', 's', 'v', 'y'}
 @attribute 'habitat' { 'd', 'g', 'l', 'm', 'p', 'u', 'w'}
-@attribute 'class' { 'e', 'p'}
+@attribute class { 'e', 'p'}
 @data
 'x','s','n','t','p','f','c','n','k','e','e','s','s','w','w','p','w','o','p','k','s','u','p'
 'x','s','y','t','a','f','c','b','k','e','c','s','s','w','w','p','w','o','p','n','n','g','e'

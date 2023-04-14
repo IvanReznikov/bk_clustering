@@ -31,22 +31,22 @@
 % 
 % 7. Attribute Information:
 %    1. Class Name: 2 (democrat, republican)
-%    2. handicapped-infants: 2 (y,n)
-%    3. water-project-cost-sharing: 2 (y,n)
-%    4. adoption-of-the-budget-resolution: 2 (y,n)
-%    5. physician-fee-freeze: 2 (y,n)
-%    6. el-salvador-aid: 2 (y,n)
-%    7. religious-groups-in-schools: 2 (y,n)
-%    8. anti-satellite-test-ban: 2 (y,n)
-%    9. aid-to-nicaraguan-contras: 2 (y,n)
-%   10. mx-missile: 2 (y,n)
-%   11. immigration: 2 (y,n)
-%   12. synfuels-corporation-cutback: 2 (y,n)
-%   13. education-spending: 2 (y,n)
-%   14. superfund-right-to-sue: 2 (y,n)
-%   15. crime: 2 (y,n)
-%   16. duty-free-exports: 2 (y,n)
-%   17. export-administration-act-south-africa: 2 (y,n)
+%    2. handicapped-infants: 2 (_y_,_n_)
+%    3. water-project-cost-sharing: 2 (_y_,_n_)
+%    4. adoption-of-the-budget-resolution: 2 (_y_,_n_)
+%    5. physician-fee-freeze: 2 (_y_,_n_)
+%    6. el-salvador-aid: 2 (_y_,_n_)
+%    7. religious-groups-in-schools: 2 (_y_,_n_)
+%    8. anti-satellite-test-ban: 2 (_y_,_n_)
+%    9. aid-to-nicaraguan-contras: 2 (_y_,_n_)
+%   10. mx-missile: 2 (_y_,_n_)
+%   11. immigration: 2 (_y_,_n_)
+%   12. synfuels-corporation-cutback: 2 (_y_,_n_)
+%   13. education-spending: 2 (_y_,_n_)
+%   14. superfund-right-to-sue: 2 (_y_,_n_)
+%   15. crime: 2 (_y_,_n_)
+%   16. duty-free-exports: 2 (_y_,_n_)
+%   17. export-administration-act-south-africa: 2 (_y_,_n_)
 % 
 % 8. Missing Attribute Values: Denoted by "?"
 % 
@@ -80,572 +80,572 @@
 % 
 % Class predictiveness and predictability: Pr(C|A=V) and Pr(A=V|C)
 %  Attribute 1: (A = handicapped-infants)
-%   0.91;  1.21  (C=democrat; V=y)
-%   0.09;  0.10  (C=republican; V=y)
-%   0.43;  0.38  (C=democrat; V=n)
-%   0.57;  0.41  (C=republican; V=n)
+%   0.91;  1.21  (C=democrat; V=_y_)
+%   0.09;  0.10  (C=republican; V=_y_)
+%   0.43;  0.38  (C=democrat; V=_n_)
+%   0.57;  0.41  (C=republican; V=_n_)
 %   0.75;  0.03  (C=democrat; V=?)
 %   0.25;  0.01  (C=republican; V=?)
 %  Attribute 2: (A = water-project-cost-sharing)
-%   0.62;  0.45  (C=democrat; V=y)
-%   0.38;  0.23  (C=republican; V=y)
-%   0.62;  0.45  (C=democrat; V=n)
-%   0.38;  0.23  (C=republican; V=n)
+%   0.62;  0.45  (C=democrat; V=_y_)
+%   0.38;  0.23  (C=republican; V=_y_)
+%   0.62;  0.45  (C=democrat; V=_n_)
+%   0.38;  0.23  (C=republican; V=_n_)
 %   0.58;  0.10  (C=democrat; V=?)
 %   0.42;  0.06  (C=republican; V=?)
 %  Attribute 3: (A = adoption-of-the-budget-resolution)
-%   0.91;  0.87  (C=democrat; V=y)
-%   0.09;  0.07  (C=republican; V=y)
-%   0.17;  0.11  (C=democrat; V=n)
-%   0.83;  0.44  (C=republican; V=n)
+%   0.91;  0.87  (C=democrat; V=_y_)
+%   0.09;  0.07  (C=republican; V=_y_)
+%   0.17;  0.11  (C=democrat; V=_n_)
+%   0.83;  0.44  (C=republican; V=_n_)
 %   0.64;  0.03  (C=democrat; V=?)
 %   0.36;  0.01  (C=republican; V=?)
 %  Attribute 4: (A = physician-fee-freeze)
-%   0.08;  0.05  (C=democrat; V=y)
-%   0.92;  0.50  (C=republican; V=y)
-%   0.99;  0.92  (C=democrat; V=n)
-%   0.01;  0.01  (C=republican; V=n)
+%   0.08;  0.05  (C=democrat; V=_y_)
+%   0.92;  0.50  (C=republican; V=_y_)
+%   0.99;  0.92  (C=democrat; V=_n_)
+%   0.01;  0.01  (C=republican; V=_n_)
 %   0.73;  0.03  (C=democrat; V=?)
 %   0.27;  0.01  (C=republican; V=?)
 %  Attribute 5: (A = el-salvador-aid)
-%   0.26;  0.21  (C=democrat; V=y)
-%   0.74;  0.48  (C=republican; V=y)
-%   0.96;  0.75  (C=democrat; V=n)
-%   0.04;  0.02  (C=republican; V=n)
+%   0.26;  0.21  (C=democrat; V=_y_)
+%   0.74;  0.48  (C=republican; V=_y_)
+%   0.96;  0.75  (C=democrat; V=_n_)
+%   0.04;  0.02  (C=republican; V=_n_)
 %   0.80;  0.04  (C=democrat; V=?)
 %   0.20;  0.01  (C=republican; V=?)
 %  Attribute 6: (A = religious-groups-in-schools)
-%   0.45;  0.46  (C=democrat; V=y)
-%   0.55;  0.46  (C=republican; V=y)
-%   0.89;  0.51  (C=democrat; V=n)
-%   0.11;  0.05  (C=republican; V=n)
+%   0.45;  0.46  (C=democrat; V=_y_)
+%   0.55;  0.46  (C=republican; V=_y_)
+%   0.89;  0.51  (C=democrat; V=_n_)
+%   0.11;  0.05  (C=republican; V=_n_)
 %   0.82;  0.03  (C=democrat; V=?)
 %   0.18;  0.01  (C=republican; V=?)
 %  Attribute 7: (A = anti-satellite-test-ban)
-%   0.84;  0.75  (C=democrat; V=y)
-%   0.16;  0.12  (C=republican; V=y)
-%   0.32;  0.22  (C=democrat; V=n)
-%   0.68;  0.38  (C=republican; V=n)
+%   0.84;  0.75  (C=democrat; V=_y_)
+%   0.16;  0.12  (C=republican; V=_y_)
+%   0.32;  0.22  (C=democrat; V=_n_)
+%   0.68;  0.38  (C=republican; V=_n_)
 %   0.57;  0.03  (C=democrat; V=?)
 %   0.43;  0.02  (C=republican; V=?)
 %  Attribute 8: (A = aid-to-nicaraguan-contras)
-%   0.90;  0.82  (C=democrat; V=y)
-%   0.10;  0.07  (C=republican; V=y)
-%   0.25;  0.17  (C=democrat; V=n)
-%   0.75;  0.41  (C=republican; V=n)
+%   0.90;  0.82  (C=democrat; V=_y_)
+%   0.10;  0.07  (C=republican; V=_y_)
+%   0.25;  0.17  (C=democrat; V=_n_)
+%   0.75;  0.41  (C=republican; V=_n_)
 %   0.27;  0.01  (C=democrat; V=?)
 %   0.73;  0.03  (C=republican; V=?)
 %  Attribute 9: (A = mx-missile)
-%   0.91;  0.70  (C=democrat; V=y)
-%   0.09;  0.06  (C=republican; V=y)
-%   0.29;  0.22  (C=democrat; V=n)
-%   0.71;  0.45  (C=republican; V=n)
+%   0.91;  0.70  (C=democrat; V=_y_)
+%   0.09;  0.06  (C=republican; V=_y_)
+%   0.29;  0.22  (C=democrat; V=_n_)
+%   0.71;  0.45  (C=republican; V=_n_)
 %   0.86;  0.07  (C=democrat; V=?)
 %   0.14;  0.01  (C=republican; V=?)
 %  Attribute 10: (A = immigration)
-%   0.57;  0.46  (C=democrat; V=y)
-%   0.43;  0.28  (C=republican; V=y)
-%   0.66;  0.52  (C=democrat; V=n)
-%   0.34;  0.23  (C=republican; V=n)
+%   0.57;  0.46  (C=democrat; V=_y_)
+%   0.43;  0.28  (C=republican; V=_y_)
+%   0.66;  0.52  (C=democrat; V=_n_)
+%   0.34;  0.23  (C=republican; V=_n_)
 %   0.57;  0.01  (C=democrat; V=?)
 %   0.43;  0.01  (C=republican; V=?)
 %  Attribute 11: (A = synfuels-corporation-cutback)
-%   0.86;  0.48  (C=democrat; V=y)
-%   0.14;  0.06  (C=republican; V=y)
-%   0.48;  0.47  (C=democrat; V=n)
-%   0.52;  0.43  (C=republican; V=n)
+%   0.86;  0.48  (C=democrat; V=_y_)
+%   0.14;  0.06  (C=republican; V=_y_)
+%   0.48;  0.47  (C=democrat; V=_n_)
+%   0.52;  0.43  (C=republican; V=_n_)
 %   0.57;  0.04  (C=democrat; V=?)
 %   0.43;  0.03  (C=republican; V=?)
 %  Attribute 12: (A = education-spending)
-%   0.21;  0.13  (C=democrat; V=y)
-%   0.79;  0.42  (C=republican; V=y)
-%   0.91;  0.80  (C=democrat; V=n)
-%   0.09;  0.06  (C=republican; V=n)
+%   0.21;  0.13  (C=democrat; V=_y_)
+%   0.79;  0.42  (C=republican; V=_y_)
+%   0.91;  0.80  (C=democrat; V=_n_)
+%   0.09;  0.06  (C=republican; V=_n_)
 %   0.58;  0.07  (C=democrat; V=?)
 %   0.42;  0.04  (C=republican; V=?)
 %  Attribute 13: (A = superfund-right-to-sue)
-%   0.35;  0.27  (C=democrat; V=y)
-%   0.65;  0.42  (C=republican; V=y)
-%   0.89;  0.67  (C=democrat; V=n)
-%   0.11;  0.07  (C=republican; V=n)
+%   0.35;  0.27  (C=democrat; V=_y_)
+%   0.65;  0.42  (C=republican; V=_y_)
+%   0.89;  0.67  (C=democrat; V=_n_)
+%   0.11;  0.07  (C=republican; V=_n_)
 %   0.60;  0.06  (C=democrat; V=?)
 %   0.40;  0.03  (C=republican; V=?)
 %  Attribute 14: (A = crime)
-%   0.36;  0.34  (C=democrat; V=y)
-%   0.64;  0.49  (C=republican; V=y)
-%   0.98;  0.63  (C=democrat; V=n)
-%   0.02;  0.01  (C=republican; V=n)
+%   0.36;  0.34  (C=democrat; V=_y_)
+%   0.64;  0.49  (C=republican; V=_y_)
+%   0.98;  0.63  (C=democrat; V=_n_)
+%   0.02;  0.01  (C=republican; V=_n_)
 %   0.59;  0.04  (C=democrat; V=?)
 %   0.41;  0.02  (C=republican; V=?)
 %  Attribute 15: (A = duty-free-exports)
-%   0.92;  0.60  (C=democrat; V=y)
-%   0.08;  0.04  (C=republican; V=y)
-%   0.39;  0.34  (C=democrat; V=n)
-%   0.61;  0.44  (C=republican; V=n)
+%   0.92;  0.60  (C=democrat; V=_y_)
+%   0.08;  0.04  (C=republican; V=_y_)
+%   0.39;  0.34  (C=democrat; V=_n_)
+%   0.61;  0.44  (C=republican; V=_n_)
 %   0.57;  0.06  (C=democrat; V=?)
 %   0.43;  0.04  (C=republican; V=?)
 %  Attribute 16: (A = export-administration-act-south-africa)
-%   0.64;  0.65  (C=democrat; V=y)
-%   0.36;  0.30  (C=republican; V=y)
-%   0.19;  0.04  (C=democrat; V=n)
-%   0.81;  0.15  (C=republican; V=n)
+%   0.64;  0.65  (C=democrat; V=_y_)
+%   0.36;  0.30  (C=republican; V=_y_)
+%   0.19;  0.04  (C=democrat; V=_n_)
+%   0.81;  0.15  (C=republican; V=_n_)
 %   0.79;  0.31  (C=democrat; V=?)
 %   0.21;  0.07  (C=republican; V=?)
 % 
 @relation vote
-@attribute 'handicapped-infants' { 'n', 'y'}
-@attribute 'water-project-cost-sharing' { 'n', 'y'}
-@attribute 'adoption-of-the-budget-resolution' { 'n', 'y'}
-@attribute 'physician-fee-freeze' { 'n', 'y'}
-@attribute 'el-salvador-aid' { 'n', 'y'}
-@attribute 'religious-groups-in-schools' { 'n', 'y'}
-@attribute 'anti-satellite-test-ban' { 'n', 'y'}
-@attribute 'aid-to-nicaraguan-contras' { 'n', 'y'}
-@attribute 'mx-missile' { 'n', 'y'}
-@attribute 'immigration' { 'n', 'y'}
-@attribute 'synfuels-corporation-cutback' { 'n', 'y'}
-@attribute 'education-spending' { 'n', 'y'}
-@attribute 'superfund-right-to-sue' { 'n', 'y'}
-@attribute 'crime' { 'n', 'y'}
-@attribute 'duty-free-exports' { 'n', 'y'}
-@attribute 'export-administration-act-south-africa' { 'n', 'y'}
-@attribute 'Class' { 'democrat', 'republican'}
+@attribute 'handicapped-infants' string
+@attribute 'water-project-cost-sharing' string
+@attribute 'adoption-of-the-budget-resolution' string
+@attribute 'physician-fee-freeze' string
+@attribute 'el-salvador-aid' string
+@attribute 'religious-groups-in-schools' string
+@attribute 'anti-satellite-test-ban' string
+@attribute 'aid-to-nicaraguan-contras' string
+@attribute 'mx-missile' string
+@attribute 'immigration' string
+@attribute 'synfuels-corporation-cutback' string
+@attribute 'education-spending' string
+@attribute 'superfund-right-to-sue' string
+@attribute 'crime' string
+@attribute 'duty-free-exports' string
+@attribute 'export-administration-act-south-africa' string
+@attribute Class { 'democrat', 'republican'}
 @data
-'n','y','n','y','y','y','n','n','n','y',?,'y','y','y','n','y','republican'
-'n','y','n','y','y','y','n','n','n','n','n','y','y','y','n',?,'republican'
-?,'y','y',?,'y','y','n','n','n','n','y','n','y','y','n','n','democrat'
-'n','y','y','n',?,'y','n','n','n','n','y','n','y','n','n','y','democrat'
-'y','y','y','n','y','y','n','n','n','n','y',?,'y','y','y','y','democrat'
-'n','y','y','n','y','y','n','n','n','n','n','n','y','y','y','y','democrat'
-'n','y','n','y','y','y','n','n','n','n','n','n',?,'y','y','y','democrat'
-'n','y','n','y','y','y','n','n','n','n','n','n','y','y',?,'y','republican'
-'n','y','n','y','y','y','n','n','n','n','n','y','y','y','n','y','republican'
-'y','y','y','n','n','n','y','y','y','n','n','n','n','n',?,?,'democrat'
-'n','y','n','y','y','n','n','n','n','n',?,?,'y','y','n','n','republican'
-'n','y','n','y','y','y','n','n','n','n','y',?,'y','y',?,?,'republican'
-'n','y','y','n','n','n','y','y','y','n','n','n','y','n',?,?,'democrat'
-'y','y','y','n','n','y','y','y',?,'y','y',?,'n','n','y',?,'democrat'
-'n','y','n','y','y','y','n','n','n','n','n','y',?,?,'n',?,'republican'
-'n','y','n','y','y','y','n','n','n','y','n','y','y',?,'n',?,'republican'
-'y','n','y','n','n','y','n','y',?,'y','y','y',?,'n','n','y','democrat'
-'y',?,'y','n','n','n','y','y','y','n','n','n','y','n','y','y','democrat'
-'n','y','n','y','y','y','n','n','n','n','n',?,'y','y','n','n','republican'
-'y','y','y','n','n','n','y','y','y','n','y','n','n','n','y','y','democrat'
-'y','y','y','n','n',?,'y','y','n','n','y','n','n','n','y','y','democrat'
-'y','y','y','n','n','n','y','y','y','n','n','n',?,?,'y','y','democrat'
-'y',?,'y','n','n','n','y','y','y','n','n',?,'n','n','y','y','democrat'
-'y','y','y','n','n','n','y','y','y','n','n','n','n','n','y','y','democrat'
-'y','n','y','n','n','n','y','y','y','n','n','n','n','n','y',?,'democrat'
-'y','n','y','n','n','n','y','y','y','y','n','n','n','n','y','y','democrat'
-'y','n','y','n','n','n','y','y','y','n','y','n','n','n','y','y','democrat'
-'y','y','y','n','n','n','y','y','y','n','y','n','n','n','y','y','democrat'
-'y','n','n','y','y','n','y','y','y','n','n','y','y','y','n','y','republican'
-'y','y','y','n','n','n','y','y','y','n','y','n','n','n','y','y','democrat'
-'n','y','n','y','y','y','n','n','n','n','n','y','y','y','n','n','republican'
-'y','y','y','n','n','n','y','y','y','n','y','n','n','n','y',?,'democrat'
-'y','y','y','n','n','n','y','y','y','y','n','n','y','n','y','y','democrat'
-'n','y','n','y','y','y','n','n','n','n','n','y','y','y','n','y','republican'
-'y','y','y','n','n','n','y','y','y','n','n','n','n','n','y','y','democrat'
-'n','y','n','y','y','y','n','n','n','n','n','y','y','y','n','n','republican'
-'y',?,'n','y','y','y','n','n','n','y','n','y',?,'y','n','y','republican'
-'y','y','n','y','y','y','n','n','n','n','n','n','y','y','n','y','republican'
-'n','y','n','y','y','y','n','n','n','y','n','y','y','y','n','n','republican'
-'y','n','y','n','n','n','y','y','y','y','y','n','y','n','y','y','democrat'
-'y','y','y','n','n','n','y','y','y','n',?,'n','n','n','n',?,'democrat'
-'y','y','y','n','n','n','y','y','y','n','n','n','n','n','y',?,'democrat'
-'y','n','y','n','n','n','y','y','y','n','n','n','n','n','n','y','democrat'
-'y','n','y','n','n','n','y','y','y','n','n','n','n','n','y','y','democrat'
-'y','y','y','n','n','n','y','y','y','n','y','n','n','n','n',?,'democrat'
-'y','y','y','n','n','n','y','y',?,'n','y','n','n','n','y',?,'democrat'
-'y','y','y','n','n','n','y','y','y','n','n','n','n','n','n','y','democrat'
-'y','n','y','n','n','n','y','y',?,'n','n','n','n','n','n',?,'democrat'
-'y','y','y','n','n','n','y','y','n','n','n','n','n','y','n','y','democrat'
-'n',?,'n','y','y','y','n','n','n','n','n','y','y','y','n','n','republican'
-'y','y','y','n','n','n','y','y','y','n','y','n','n','n','y','y','democrat'
-'n','y','n','y','y','y','n',?,'n','n','n','y','y','y','n','y','republican'
-'y','y','y','n','n','n','y','y','y','n','n','n','n','n',?,?,'democrat'
-'y','y','n','y','y','y','n','n','n','y','n','y','y','y','n','n','republican'
-'y','y','y','n','n','y',?,'y','n','n','y','y','n','y','n',?,'democrat'
-'n','y','n','y','y','y','n','n','n','y','y','y','y','y','n','n','republican'
-'n','y','n','y','y','y','n','n','n','y','y','y','y','y','n','y','republican'
-'n','y','n','y','y','y','n','n','n','y','n','y','y','y','n','y','republican'
-'n','y','n','y','y','y','n','n','n','y','n','y','y','y','n','y','republican'
-'n','y','n','y','y','y','n','n','n','y','n','y','y','y','n',?,'republican'
-'y','y','y','n','n',?,'y','y','y','y','n','n','n','n','y',?,'democrat'
-'n','y','n','y','y','y','n','n','n','n','n','y','y','y','n','n','republican'
-'y','y','y','n','n','n','y','y','y','n','n','n','n','n','n',?,'democrat'
-'y','y','y','n','n','n','y','y','y','n','y','n','n','n','n','y','democrat'
-'y','y','y','n','n','n','y','y','y','n','y',?,'n','n','n','y','democrat'
-'y','y','n','y','y','y','y','n','n','n','n','y','y','y','n','y','republican'
-'n','y','n','y','y','y','y','n','n','n','y','y','y','y','n','y','republican'
-'n','y','n','y','y','y','n','n','n','y','n','y','y','y','n','n','republican'
-'y',?,'y','n','n','n','y','y','y','n','n','n','y','n','y','y','democrat'
-'y','y','y','n','n','n','y','y','y','n','n','n','n','n','y','y','democrat'
-'y','n','y','n','n','n','y','y','y','n','n','n','y','n','y',?,'democrat'
-'y','y','y','y','n','n','y','y','y','y','y','n','n','y','n','y','republican'
-'y','y','y','n','n','n','y','y','y','n','y','n','n','n','y',?,'democrat'
-'y','n','y','y','y','n','y','n','y','y','n','n','y','y','n','y','republican'
-'y','n','y','n','n','y','y','y','y','y','y','n','n','y','y','y','democrat'
-'n','y','y','y','y','y','n','n','n','y','y','n','y','y','n','n','democrat'
-'n','y','y','n','y','y','n','n','n','y','y','y','y','y','n',?,'democrat'
-'n','y','y','y','y','y','n','y','y','y','y','y','y','y','n','y','democrat'
-'y','y','y','n','y','y','n','n','n','y','y','n','y','y','n','y','democrat'
-'n','n','n','y','y','n','n','n','n','y','n','y','y','y','n','n','republican'
-'y','n','y','n','n','y','y','y','y','y','n','y','n','y','n',?,'democrat'
-'y','n','y','n','n','n','y','y',?,'y','y','y','n','y','n','y','democrat'
-'n','n','n','y','y','y','n','n','n','y','n','y','y','y','n','y','republican'
-'n','n','n','y','y','y','n','n','n','n','n','y','y','y','n','n','republican'
-'n',?,'n','y','y','y','n','n','n','y','n','y','y','y','n','n','republican'
-'n','n','y','n','y','y','n','n','n','y','y','y','y','y','n','y','democrat'
-'n','n','n','y','y','y','n','n','n','y','n','y','y','y','n','n','republican'
-'n','n','n','y','y','y','n','n','n','n','n','y','y','y','n','n','republican'
-'n','y','y','n','y','y','y','n','y','y','y','n','y','y','n','y','democrat'
-'n','n','n','y','y','y','n','n','n','y','n',?,'y','y','n',?,'republican'
-'y','n','y','n','n','n','y','y','y','y','n','n','n','n','y','y','democrat'
-'y','n','y','n','n','n','y','y','y','y','y','n','n','n','y','y','democrat'
-'y','y','y','n','n','n','y','y','n','y','y','n','n',?,'y','y','democrat'
-'y','n','y','n','n','n','y','n','y','y','y','n','n','n','y','y','democrat'
-'y','n','y','n','y','y','n','n','n','n','n','n','n','n','n','y','democrat'
-'y','n','y','n','y','y','n',?,?,'n','y',?,?,?,'y','y','democrat'
-'n','n',?,'n','y','y','n','n','n','n','y','y','y','y','n','y','democrat'
-'y','n','n','n','y','y','y','n','n','y','y','n','n','y','n','y','democrat'
-'y','y','y','n','n','y','y','y','y','y','n','n','n','n','n','y','democrat'
-'n','n','n','y','y','y','n','n','n','y',?,'y','y','y','n','n','republican'
-'y','n','n','n','y','y','n','n','n','n','y','y','n','y','n','y','democrat'
-'y','n','y','n','y','y','y','n','n','n','y','n','n','y','n','y','democrat'
-'y','n','y','n','y','y','y','n',?,'n','y','n','y','y','y',?,'democrat'
-'y','n','n','n','y','y',?,'n',?,'n','n','n','n','y',?,'n','democrat'
-?,?,?,?,'n','y','y','y','y','y',?,'n','y','y','n',?,'democrat'
-'y','y','y','n','n','n','n','y','y','n','y','n','n','n','y','y','democrat'
-'n','y','n','y','y','y','n','n','n','n','n','y','y','y','n','y','republican'
-'n',?,?,?,?,?,?,?,?,?,?,?,?,'y',?,?,'republican'
-'y',?,'y','n','n','n','y','y','y','n','n','n','n','n','y',?,'democrat'
-'y',?,'y','n','n','n','y','y','y','n','n','n','n','n','y',?,'democrat'
-'n','n','y','n','n','n','y','y','y','y','n','n','n','n','y','y','democrat'
-'n',?,'n','y','y','y','n','n','n','y','n','y','y','y','n','y','republican'
-'n',?,'y','n','n','y','y','y','n','y','n','n','n','n','y',?,'democrat'
-'n',?,'n','y','y','y','n','n','n','y','n','y','y','y','n','n','republican'
-'y',?,'y','n','n','n','y','y','y','n','n','n','n','n','y',?,'democrat'
-'n',?,'y','n',?,?,'y','y','y','y',?,?,'n','n','y','y','democrat'
-'y','n','y','n','n','n','y','y','y','n','y','n','n','n','y','y','democrat'
-'y','y','y','y','y','n','y','n','n','n','n','y','y','y','n','y','republican'
-'n','y','y','n','n','n','n','y','y','y','y','n','n','n','y','y','democrat'
-'n','n','n','y','y','y','n','n','n','n','n','y','y','y','n','n','republican'
-'n',?,?,'y','y','y','n','n','n','y','n','y','y','y',?,'y','republican'
-'n',?,'n','y','y','y','n','n','n','y','n','y','y','y','n','y','republican'
-'n','n','n','y','y','y','n','n','n','y','n','y','n','y','n','y','republican'
-'y',?,'n','y','y','y','n','y','n','n','n','y','y','y','n','y','republican'
-'n',?,'y','n','n','n','y','y','y','n','n','n','n','n','y','y','democrat'
-'n',?,'n','y','y','y','n','n','n','y','n','y','y','y','n','y','republican'
-'n',?,'n','y','y','y','n','n','n','n','n','y','y','y','n','n','republican'
-'n',?,'y','n','n','n','y','y','y','y','y','n','n','y','y','y','democrat'
-'n',?,'y','n','n','y','n','y','n','y','y','n','n','n','y','y','democrat'
-?,?,'y','n','n','n','y','y',?,'n',?,?,?,?,?,?,'democrat'
-'y',?,'y','n',?,?,'y','y','y','n','n','n','n','n','y',?,'democrat'
-'n','n','y','n','n','y','n','y','y','y','n','n','n','y','n','y','democrat'
-'n','n','n','y','y','y','n','n','n','y','n','y','y','y','n',?,'republican'
-'n','n','n','y','y','y','n','n','n','y','n','y','y','y','n','y','republican'
-'n','n','n','y','y','y','n','n','n','n','n','y','y','y','n',?,'republican'
-'n','n','n','y','y','y','n','n','n','y','n','y','y','y','n','n','republican'
-'n','y','n','y','y','y','n','n','n','y','y','y','y','n','n','y','republican'
-'n',?,'y','n','n','y','y','y','y','y','n','n','n','y','y','y','democrat'
-'n','n','y','n','n','y','y','y','y','y','n','n','n','y','n','y','democrat'
-'y','n','y','n','n','y','y','y','y','n','n','n','n','n','y','y','democrat'
-'n','n','n','y','n','n','y','y','y','y','n','n','y','y','n','y','republican'
-'n','n','n','y','y','y','y','y','y','y','n','y','y','y',?,'y','republican'
-'n','n','n','y','y','y','y','y','y','y','n','y','y','y','n','y','republican'
-?,'y','n','n','n','n','y','y','y','y','y','n','n','y','y','y','democrat'
-'n',?,'n','n','n','y','y','y','y','y','n','n','n','y','n',?,'democrat'
-'n','n','y','n','n','y','y','y','y','y','n','n','n','y',?,'y','democrat'
-'n','y','n','y','y','y','n','n','n','n','n','y','y','y','n','y','republican'
-'n','n','n','n','n','n','y','y','y','y','n','y','y','y','y','y','democrat'
-'n','y','n','y','y','y','n','n','n','y','y','y','y','y','n','y','republican'
-'n','n','y','n','n','n','y','y','y','y','n','n','y','n','y','y','democrat'
-'y','y','n','y','y','y','n','n','n','y','n','y','y','y','n','y','republican'
-'y','y',?,'y','y','y','n','n','y','n','y',?,'y','y','n','n','democrat'
-'n','y','y','n','n','y','n','y','y','y','y','n','y','n','y','y','democrat'
-'n','n','y','n','n','y','y','y','y','y','y','n','y','y','n','y','democrat'
-'n','y','n','y','y','y','n','n','n','n','n','y','y','y','n','n','republican'
-'y','y','n','y','y','y','n',?,'n','n','y','y','y','y','n','n','republican'
-'y','y','n','y','y','y','y','n','n','n','n','y','y','y','n','n','republican'
-'n','y','y','n','n','y','n','y','y','n','y','n',?,?,?,?,'democrat'
-'n','y','n','y','y','y','n','n','n','y','n','y','y','y','n','n','republican'
-'n','y','y','n',?,'y','y','y','y','y','y','n','n',?,'n',?,'democrat'
-'n','y','n','n','y','y','n','n','n','n','n','y','y','y','y','y','democrat'
-'n','n','n','n','y','y','y','n','n','n','n','y','y','y','n','y','democrat'
-'n','y','y','n','y','y','y','n','n','n','y','y','y','y','n','y','democrat'
-'n','y','n','y','y','y','y','n','n','n','n','y','y','y','n','y','republican'
-'y','y','n','n','y','y','n','n','n','y','y','y','y','y','n',?,'democrat'
-'n','y','y','n','n','y','y','y','y','y','y','n','y','n','y',?,'democrat'
-'y','n','y','y','y','y','y','y','n','y','n','y','n','y','y','y','republican'
-'y','n','y','y','y','y','y','y','n','y','y','y','n','y','y','y','republican'
-'n','n','y','y','y','y','n','n','y','n','n','n','y','y','y',?,'democrat'
-'y','n','y','n','n','n','y','y','y','y','y','n','n','y','n','y','democrat'
-'y','n','y','n','n','n',?,'y','y',?,'n','n','n','n','y',?,'democrat'
-'n',?,'n','y','y','y','n','n','n','y','n','y','y','y','n','y','republican'
-'n','y','y','n','n','n','y','y','y','y','n','n',?,'n','y','y','democrat'
-'n','n','n','n','y','y','n','n','n','y','y','y','y','y','n','y','democrat'
-'y',?,'y','n','n','n','y','y','y','n','n','n','n','n','y',?,'democrat'
-'n','y','y','n','n','n','y','y','y','y','n','n','n','n','y','y','democrat'
-'n','n','y','y','n','n','y','y','y','y','n','n','n','y','y','y','republican'
-'n','n','y','n','n','n','y','y','y','y','y',?,'n','n','y','y','democrat'
-?,'n','y','n','n','n','y','y','y','y','y',?,'n','n','y',?,'democrat'
-'y','n','y','n','n','n','y','y','y','y','n','n','n','n','y','y','democrat'
-?,?,'y','n','n','n','y','y','y',?,?,'n','n','n',?,?,'democrat'
-'n','n','y','n','n','n','y','y','y','y','y','n','n','n','y','y','democrat'
-'y',?,'y','n','n','n','y','y','y','n','n','n','n','n','y','y','democrat'
-?,?,?,?,?,?,?,?,'y',?,?,?,?,?,?,?,'democrat'
-'n','n','y','n','n','n','y','y','y','y','y','n','n','n','y','y','democrat'
-'y','n','y','n','n','n','y','y','y','y','n',?,'n','n','y','y','democrat'
-'n','y','y','n','n','n','y','y','y','y','y','n','n','n','y','y','democrat'
-'y','n','y','n','n','n','y','y','y','n','n','n','n','n','y',?,'democrat'
-'y',?,'n','y','y','y','y','y','n','n','n','y',?,'y',?,?,'republican'
-'y','n','y','n','n','n','y','y','y','n','n','n','n','n','y','y','democrat'
-'n',?,'n','y','y','y','n','n','n','n','n','y','y','y','n',?,'republican'
-'n','y','n','y','y','y','n',?,'n','y','n','y','y','y','n',?,'republican'
-'n','n','n','n','n','y','y','y','y','n','y','n','n','y','y','y','democrat'
-'n','n','y','n','n','n','y','y','y','n','n','n','n','n','y','y','democrat'
-'n','n','y','n','n','y','y',?,'y','y','y','n','n','n','y','y','democrat'
-'n','n','n','y','y','y','n','n','n','n','n','y','y','y','n',?,'republican'
-'n','n','y','n','n','y','y','y','y','n','y','y','n','y','y',?,'democrat'
-'n',?,'y','y','y','y','n','n','n','y','n','n','n','y','n','y','republican'
-'n','n','y','n','n','n','y','y','y','y','y','n',?,'n','y',?,'democrat'
-'y','y','n','n','n','n','y','y',?,'n','y','n','n','n','y',?,'democrat'
-'n','n','y','n','n','n','y','y','y','n','n','n','n','y','y','y','democrat'
-'y','y','y','n','n','n','y','y','y','n','n','n','n','n','y','y','democrat'
-'y','n','y','n','n','y','y','y','y','y','y','n','n','n','y','y','democrat'
-'y','n','y','n','n','n','y','y','y','y','n','n','n','n','y','y','democrat'
-'n','n','y','y','y','y','y','n','n','n','n','y','y','y','n','y','republican'
-'n','n','y','n','n','y','y','y','y','y','n','y','n','n','n','y','democrat'
-'n','n','n','y','y','y','n','n','n','y','n','y','n','y','n','y','republican'
-'y',?,'n','y','y','y','y','n','n','y','n','y','y','y','n','y','republican'
-'n','n','y','n','n','n','y','y','y','n','n',?,'n','n','y','y','democrat'
-'y','y','y','n','n','n','y','y','y','y','y','n','n','n','n','y','democrat'
-'n','n','y','n','n','y','y','y','y','n','n','n','n','n','y','y','democrat'
-'n','y','n','y','y','y','n','n','n','y','n','y','y','y','n','y','republican'
-'n','n','y','n','n','n','y','y','y','n','y','n','n','n','y','y','democrat'
-'n','y','y','n','n','y','n','y','y','n','y','n','y','n','y','y','democrat'
-'y','y','n','y','y','y','n','n','n','y','n','y','y','y','n','y','republican'
-'n','y','y','y','y','y','n','n','n','y','y','y','y','y','y',?,'democrat'
-'y','y','y','n','y','y','n','n',?,'y','n','n','n','y','y',?,'democrat'
-'n','y','n','y','y','y','n','n','n','y','n','y','y','y','n','n','republican'
-'y',?,'y','n','n','n','y','y','y','n',?,'n','n','n','y',?,'democrat'
-'n','y','y','n','n','n','n','y','y','n','y','n','n','y','y','y','democrat'
-'n','n','y','n','n','n','y','y','y','n','n','n','n','n','y',?,'democrat'
-'n','y','y','n','y','y','n','n','n','n','y','n','n','n','y',?,'democrat'
-'y','n','y','n','n','n','y','y','y','n','y','n','n','n','y',?,'democrat'
-'n','n','n','y','y','n','n','n','n','n','n','y','y','y','n','y','republican'
-'n','y','n','y','y','y','n','n','n','y','n',?,'y','y','n','n','republican'
-'n',?,'n','y','y','y','n','n','n','n','n','y','y','y','n','y','republican'
-'n','n','y','n','n','y','y','y','y','n','y','n','n','y','y','y','democrat'
-'y','n','y','n','n','n','y','y','y','n','n','n','n','n',?,'y','democrat'
-'n','y','n','y','y','y','n','n','n','n','n','y','y',?,'n','y','republican'
-'n','y','y','y','y','y','y','n','y','y','n','y','y','y','n','y','republican'
-'n','y','n','y','y','y','n','n','n','n','n','y','y','y','n','y','republican'
-'n','y','n','y','y','y','n','n','y','y','n','y','y','y','n','y','republican'
-'n','y','y','n','n','n','y','y','n','n','y','n','n','n','y',?,'democrat'
-'n','y','n','y','y','y','n','n','n','y','n','y','y','y','n','y','republican'
-'n','n','y','n','n','y','y','y','y','y','n','y','n','y','y',?,'democrat'
-'n','n','n','y','y','y','n','n','n','y','n','y','n','y','n','y','republican'
-'n','n','y','n','n','n','y','y','y','n','n','n','n','n','y','y','democrat'
-'y','n','y','n','n','y','y','y','n','n','n','y','y','n','n','y','democrat'
-'y','y','y','n','n','n','y','y',?,'y','n','n','n','n','y',?,'democrat'
-'n','n','n','y','y','y','y','n','n','y','n','n','n','y','y','y','republican'
-'n','n','n','y','n','y','y',?,'y','n','n','y','y','y','n','y','republican'
-'y','n','y','n','n','n','y','y','y','y','y','n','n','y','y','y','democrat'
-'n','n','n','n','y','y','y','n','n','n','n',?,'n','y','y','y','republican'
-'n','y','y','n','n','n','y','y',?,'y','n','n','y','n','y','y','democrat'
-'y','n','y','n','n','n','n','y','y','y','n','n','n','n','y','y','democrat'
-'y','n','y','n','n','n','y','y','y','y','y','n','n','n','y','y','democrat'
-'n','n','y','n','y','n','y','y','y','n','n','n','n','y',?,'y','democrat'
-'n','y','n','y','y','y',?,'n','n','n','n',?,'y','y','n','n','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_',?,'_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_',?,'republican'
+?,'_y_','_y_',?,'_y_','_y_','_n_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_n_','_n_','democrat'
+'_n_','_y_','_y_','_n_',?,'_y_','_n_','_n_','_n_','_n_','_y_','_n_','_y_','_n_','_n_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_y_','_y_','_n_','_n_','_n_','_n_','_y_',?,'_y_','_y_','_y_','_y_','democrat'
+'_n_','_y_','_y_','_n_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_n_',?,'_y_','_y_','_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_n_','_y_','_y_',?,'_y_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_',?,?,'democrat'
+'_n_','_y_','_n_','_y_','_y_','_n_','_n_','_n_','_n_','_n_',?,?,'_y_','_y_','_n_','_n_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_',?,'_y_','_y_',?,?,'republican'
+'_n_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_',?,?,'democrat'
+'_y_','_y_','_y_','_n_','_n_','_y_','_y_','_y_',?,'_y_','_y_',?,'_n_','_n_','_y_',?,'democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_',?,?,'_n_',?,'republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_',?,'_n_',?,'republican'
+'_y_','_n_','_y_','_n_','_n_','_y_','_n_','_y_',?,'_y_','_y_','_y_',?,'_n_','_n_','_y_','democrat'
+'_y_',?,'_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_',?,'_y_','_y_','_n_','_n_','republican'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_n_',?,'_y_','_y_','_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_',?,?,'_y_','_y_','democrat'
+'_y_',?,'_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_',?,'_n_','_n_','_y_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_','_n_','_n_','_y_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_y_',?,'democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_n_','_y_','_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_y_',?,'_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_',?,'_y_','_n_','_y_','republican'
+'_y_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','_n_','_y_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_',?,'_n_','_n_','_n_','_n_',?,'democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_n_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_n_',?,'democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_',?,'_n_','_y_','_n_','_n_','_n_','_y_',?,'democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_n_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_',?,'_n_','_n_','_n_','_n_','_n_','_n_',?,'democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_n_','_y_','democrat'
+'_n_',?,'_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_',?,'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_',?,?,'democrat'
+'_y_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_y_','_y_','_y_','_n_','_n_','_y_',?,'_y_','_n_','_n_','_y_','_y_','_n_','_y_','_n_',?,'democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_',?,'republican'
+'_y_','_y_','_y_','_n_','_n_',?,'_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_n_',?,'democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_n_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_',?,'_n_','_n_','_n_','_y_','democrat'
+'_y_','_y_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_y_',?,'_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_',?,'democrat'
+'_y_','_y_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_n_','_y_','republican'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_y_',?,'democrat'
+'_y_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_y_','_y_','_n_','_n_','_y_','_y_','_n_','_y_','republican'
+'_y_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','democrat'
+'_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_n_','_y_','_y_','_n_','_n_','democrat'
+'_n_','_y_','_y_','_n_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_',?,'democrat'
+'_n_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_n_','_y_','_y_','_n_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_y_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','_n_','_y_','_n_',?,'democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_',?,'_y_','_y_','_y_','_n_','_y_','_n_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_n_',?,'_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_n_','_n_','_y_','_n_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_n_','_y_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','_y_','_n_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_',?,'_y_','_y_','_n_',?,'republican'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_n_','_y_','_y_','_n_','_n_',?,'_y_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_n_','_n_','_n_','_n_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_y_','_y_','_n_',?,?,'_n_','_y_',?,?,?,'_y_','_y_','democrat'
+'_n_','_n_',?,'_n_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_y_','democrat'
+'_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_y_','_y_','_n_','_n_','_y_','_n_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_',?,'_y_','_y_','_y_','_n_','_n_','republican'
+'_y_','_n_','_n_','_n_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_n_','_y_','_n_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_n_','_y_','_n_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_y_','_y_','_y_','_n_',?,'_n_','_y_','_n_','_y_','_y_','_y_',?,'democrat'
+'_y_','_n_','_n_','_n_','_y_','_y_',?,'_n_',?,'_n_','_n_','_n_','_n_','_y_',?,'_n_','democrat'
+?,?,?,?,'_n_','_y_','_y_','_y_','_y_','_y_',?,'_n_','_y_','_y_','_n_',?,'democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_',?,?,?,?,?,?,?,?,?,?,?,?,'_y_',?,?,'republican'
+'_y_',?,'_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_y_',?,'_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_',?,'_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_',?,'_y_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_n_',?,'_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_y_',?,'_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_n_',?,'_y_','_n_',?,?,'_y_','_y_','_y_','_y_',?,?,'_n_','_n_','_y_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_','_y_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_n_',?,?,'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_',?,'_y_','republican'
+'_n_',?,'_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_n_','_y_','_n_','_y_','republican'
+'_y_',?,'_n_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_',?,'_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_',?,'_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_',?,'_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_n_',?,'_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','democrat'
+'_n_',?,'_y_','_n_','_n_','_y_','_n_','_y_','_n_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+?,?,'_y_','_n_','_n_','_n_','_y_','_y_',?,'_n_',?,?,?,?,?,?,'democrat'
+'_y_',?,'_y_','_n_',?,?,'_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_n_','_n_','_y_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_',?,'republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_',?,'republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','republican'
+'_n_',?,'_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','democrat'
+'_n_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_y_','_n_','_y_','republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','_y_','_y_',?,'_y_','republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+?,'_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','democrat'
+'_n_',?,'_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_',?,'democrat'
+'_n_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_',?,'_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_y_','_y_','_y_','_y_','_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_n_','_y_','_y_','democrat'
+'_y_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_y_','_y_',?,'_y_','_y_','_y_','_n_','_n_','_y_','_n_','_y_',?,'_y_','_y_','_n_','_n_','democrat'
+'_n_','_y_','_y_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_y_','_n_','_y_','_n_','_y_','_y_','democrat'
+'_n_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','_y_','_n_','_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_y_','_y_','_n_','_y_','_y_','_y_','_n_',?,'_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','republican'
+'_y_','_y_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_n_','_y_','_y_','_n_','_n_','_y_','_n_','_y_','_y_','_n_','_y_','_n_',?,?,?,?,'democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_n_','_y_','_y_','_n_',?,'_y_','_y_','_y_','_y_','_y_','_y_','_n_','_n_',?,'_n_',?,'democrat'
+'_n_','_y_','_n_','_n_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','democrat'
+'_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','democrat'
+'_n_','_y_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_y_','_y_','_n_','_n_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_',?,'democrat'
+'_n_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','_n_','_y_',?,'democrat'
+'_y_','_n_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','_n_','_y_','_n_','_y_','_y_','_y_','republican'
+'_y_','_n_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','_y_','_y_','republican'
+'_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_',?,'democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_n_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_',?,'_y_','_y_',?,'_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_n_',?,'_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_',?,'_n_','_y_','_y_','democrat'
+'_n_','_n_','_n_','_n_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','democrat'
+'_y_',?,'_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_n_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_n_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','republican'
+'_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_',?,'_n_','_n_','_y_','_y_','democrat'
+?,'_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_',?,'_n_','_n_','_y_',?,'democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+?,?,'_y_','_n_','_n_','_n_','_y_','_y_','_y_',?,?,'_n_','_n_','_n_',?,?,'democrat'
+'_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_',?,'_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+?,?,?,?,?,?,?,?,'_y_',?,?,?,?,?,?,?,'democrat'
+'_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_',?,'_n_','_n_','_y_','_y_','democrat'
+'_n_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_y_',?,'_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_',?,'_y_',?,?,'republican'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_',?,'_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_',?,'republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_',?,'_n_','_y_','_n_','_y_','_y_','_y_','_n_',?,'republican'
+'_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','democrat'
+'_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_n_','_y_','_n_','_n_','_y_','_y_',?,'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_',?,'republican'
+'_n_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_y_','_y_','_n_','_y_','_y_',?,'democrat'
+'_n_',?,'_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','republican'
+'_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_',?,'_n_','_y_',?,'democrat'
+'_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_',?,'_n_','_y_','_n_','_n_','_n_','_y_',?,'democrat'
+'_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_n_','_y_','_n_','_y_','republican'
+'_y_',?,'_n_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_',?,'_n_','_n_','_y_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','democrat'
+'_n_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_y_','_y_','_n_','_n_','_y_','_n_','_y_','_y_','_n_','_y_','_n_','_y_','_n_','_y_','_y_','democrat'
+'_y_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_y_',?,'democrat'
+'_y_','_y_','_y_','_n_','_y_','_y_','_n_','_n_',?,'_y_','_n_','_n_','_n_','_y_','_y_',?,'democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_y_',?,'_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_',?,'_n_','_n_','_n_','_y_',?,'democrat'
+'_n_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','democrat'
+'_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_n_','_y_','_y_','_n_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_n_','_n_','_n_','_y_',?,'democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_y_',?,'democrat'
+'_n_','_n_','_n_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_',?,'_y_','_y_','_n_','_n_','republican'
+'_n_',?,'_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_',?,'_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_',?,'_n_','_y_','republican'
+'_n_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_y_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_n_','_n_','_y_','_n_','_n_','_n_','_y_',?,'democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','_n_','_y_','_y_',?,'democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_n_','_y_','_n_','_y_','republican'
+'_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_n_','_n_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_',?,'_y_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','republican'
+'_n_','_n_','_n_','_y_','_n_','_y_','_y_',?,'_y_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','democrat'
+'_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_',?,'_n_','_y_','_y_','_y_','republican'
+'_n_','_y_','_y_','_n_','_n_','_n_','_y_','_y_',?,'_y_','_n_','_n_','_y_','_n_','_y_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_n_','_y_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_',?,'_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_',?,'_n_','_n_','_n_','_n_',?,'_y_','_y_','_n_','_n_','republican'
 ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,'republican'
-'y','n','y','n','n','n','y','y',?,'n','y','n','n','n','y','y','democrat'
-'n','y','n','y','y','y','n','n','n','n','n','y','y','y','n','n','republican'
-'n','y','n','y','y','y','n','n','n','n','n','y','y','y','n','n','republican'
-'y','y','y','n','n','y','y','y','y','n','n','n','n','n','y','y','democrat'
-'n','y','n','y','y','y','n','n','n','n','n','y','y','y','n','y','republican'
-'y','n','y','n','n','n','y','y','y','y','n','n','n','n','n','y','democrat'
-'y','n','y','n','n','n','y','y','y','y','n','n','n','y','y','y','democrat'
-'n','n','n','y','y','n','n','n','n','n','n','y','n','y','n','n','republican'
-'n','n','n','y','y','n','n','n','n','n','n','y','n','y',?,'y','republican'
-'n','n','y','n','n','n','y','y','y','n','y','n','n','n','y','y','democrat'
-'y','n','y','n','n','n','y','y','y','n','n','n','n','n','n','y','democrat'
-'y','n','y','n','n','n','y','y','y','y','n','n','n','n','n','y','democrat'
-'y','n','y','n','n',?,'y','y','y','n',?,?,'n',?,?,?,'democrat'
-'y','n','y','n','n','n','y','y','y','y','n','n',?,'n','y','y','democrat'
-'y','n','y','n','n','n','y','y','y','n','n','n','n','n','y',?,'democrat'
-'y','n','y','n','n','n','y','y','y','n','n','n','n','n','y',?,'democrat'
-'y','n','y','n','n','n','y','y','y','y','n','n','n','n','n','y','democrat'
-'n','n','n','y','y','y','n','n','n','y','n','y','n','y','n','y','republican'
-'y','n','n','n','n','n','y','y','y','y','n','n','n','y','n','y','republican'
-'y','n','y','n','n','n','y','y','y','n','n','n','n','n','y',?,'democrat'
-'y','n','y','n','n','n','y','y','y','n','n','n','n','n','n','y','democrat'
-'y','y','y','n','n','n','y','y','y','n','n','n','n','n','y','y','democrat'
-'n','y','y','n','n','y','y','y','y','n',?,'n','n','n','n','y','democrat'
-'y','n','y','n','n','n','y','y','y','y','n','n','n','n','y',?,'democrat'
-'n','n','n','y','y','n','y','y','n','y','n','y','y','y',?,'y','republican'
-'y','n','n','y','y','n','y','n','n','y','n','n','n','y','y','y','republican'
-'n','n','y','n','y','y','n','n','n','n',?,'n','y','y','n','n','democrat'
-'n','n','n','y','y','y','n','n','n','n','n','y','y','y','y','n','republican'
-'n','n','y','y','y','y','y','y','n','y','n','n','n','y','n','y','republican'
-'n','n','n','y','y','y','n','n','n','n','n','y','y','y','n','y','republican'
-'n','n','n','y','y','y','n','n','n','y','n','y','y','y','n','n','republican'
-'n','n','y','n','n','n','y','y','y','y','n','n','n','y','n','y','democrat'
-'y','n','y','y','y','y','y','y','n','n','n','n','n','y','n',?,'republican'
-'y','n','n','y','y','y','n','n','n','y','n',?,'y','y','n','n','republican'
-'n','n','n','y','y','y','n','n','n','n','n','y','y','y','n','y','republican'
-'n','n','y','n','n','y','y','y','y','y','y','n','n','n',?,'y','democrat'
-'n','n','y','n','n','y','y','y','y','y','y','n','n','n','y','y','democrat'
-'n','n','y','n','n','y',?,'y',?,'y','y','y','n','y','y',?,'democrat'
-'y','y','y',?,'n','y','y','y','y','n','y','n','y','n',?,'y','democrat'
-'y','y','y','n','y','y','n','y','n','y','y','n','y','y','y','y','democrat'
-'y','y','y','n','y','y','n','y','n','y','y','n','y','y','n',?,'democrat'
-'y','n','y','n',?,'y',?,'y','y','y','n','n','y','y','n','y','democrat'
-'y','n','y','n','n','y','y','y','y','y','n',?,'n','y','n','y','democrat'
-'y','n','y','n','n','y','y','y','n','y','y','n','y','y','y','y','democrat'
-'y','y','y','n','n','y','y','y','y','y','y','n','y','y','y','y','democrat'
-'n','y','y','n','n','y','y','y','n','y','y','n','y','y','n',?,'democrat'
-'n','y','n','y','y','y',?,?,'n','y','n','y',?,?,?,?,'republican'
-'n','n','y','y','y','y','n','n','n','y','n','y','y','y','y','y','republican'
-'y','y','y','n','n','y','y','y','y','y','n','n',?,'n','y',?,'democrat'
-'n','y','n','n','n','n','y','y','y','y','y','n','n','n','y','y','democrat'
-'n','y','y','n','n','y','y','y','y','y','n','n','y','y','y','y','democrat'
-'n','n','n','y','y','n','y','y','y','y','n','y','y','y','n','y','republican'
-'n','n',?,'n','n','y','y','y','y','n','n','n','n','n','y','y','democrat'
-'n','n','n','y','y','y','y','n','n','y','n','y','y','y','n','y','republican'
-'n','n','n','y','y','y','n','n','n','n','n','y','y','y','n','n','republican'
-'n','y','n','y','y','y','n','n','n','y','n','y','y','y','n',?,'republican'
-'n','n','n','y','y','y','n','n','n','y','n','y','y','y','n','n','republican'
-'n','n','n','y','y','y','n','n','n','n','n','y','y','y','n','n','republican'
-'y','n','y','n','n','y','y','y','y','n','n','n','n','y','n',?,'democrat'
-'n','n','n','y','y','y','n','n','n','y','n','y','y','y','n','n','republican'
-'y','n','n','n','n','y','y','y','y','y','n','n','n','y','y','y','democrat'
-'n','n','n','y','y','y','n','n','n','y','n','y','y','y','y','n','republican'
-'n','n','y','n','n','y','y','y','y','y','n','n','y','n','n','y','democrat'
-'y','y','y','n','n','n','y','y','y','y','n','n','n','n','y','y','democrat'
-'n','y','y','y','y','y','n','n','n','y','n','y','y','y','n','y','republican'
-'n','y','n','y','y','y','y','y','n','n','y','y','y','y','y','y','republican'
-'n','y','y','y','y','y','y',?,'n','n','n','n',?,?,'y',?,'republican'
-'n','n','n','n','n','y','n','y','y','n','y','y','y','y','y','n','democrat'
-'y','n','n','n','n','n','y','y','y','y','n','n','n','n','y','y','democrat'
-'n','n','y','n','n','n','y','y','y','n','n','n','n','n','y',?,'democrat'
-'y','n','y','n','n','n','y','y','y','n','n','n','n','n','y',?,'democrat'
-'n','y','y','n','n','y','n','y','y','y','n','n','y','y','n','y','democrat'
-'y','y','y','n','n','n','y','y','y','y','n','n','y','n','n','y','democrat'
-'y','y','y','n',?,'y','n',?,'n','n','y','n','y','y','n',?,'democrat'
-'y','y','y','n','y','y','n','y',?,'y','n','n','y','y','n',?,'democrat'
-'n','y','n','y','y','y','n','n','n','n','y','y','y','y','n','n','republican'
-'n','y','n','n','y','y','n','n',?,'n','n','y','y','y','n','y','democrat'
-'y','y','n','y','n','n','y','y','y','n','y','n','n','y','n','y','democrat'
-'n','y','n','y','y','y','n','n','n','n','n','y','y','y','n','y','republican'
-'y','y','y','n','n','n','y','y','y','n','y','n','n','n','n','y','democrat'
-'y',?,'y','n','n','y','y','y','y','y','n','n','n','n','y',?,'democrat'
-'n','y','n','y','y','y','n','n','n','y','n','y','y','y','n','n','republican'
-'y',?,'y','n','n','n','y','y','y','n','n','n','n','n','y',?,'democrat'
-'y','n','y','n','n','n','y','y','y','n','y','n','n','n','y',?,'democrat'
-'n','n','y','n','n','n','y','y','y','n','n','n','n','n','y','y','democrat'
-'n','y','y','n','n','y','y','y',?,'n','y','y','n','n','y','y','democrat'
-'n','n','n','y','y','y','n','n','n','y','y','y','y','y','n',?,'republican'
-'n','n','y','n','n','y','y','y','n','n','y','n','n','y',?,'y','democrat'
-'y','n','y','n','n','n','y','y','y','n','n','n','n','n','y','y','democrat'
-'y','n','y','n','n','n','y','y','y','y','n','n','n','y','y','y','democrat'
-'y','n','n','y','y','y','n','n','n','n','y','y','y','y','n','n','republican'
-'n','n','n','y','y','y','n','n','n','y','y','y','n','y','n','y','republican'
-'n',?,'y',?,'n','y','y','y','y','y','y','n',?,?,'y','y','democrat'
-'n','y','y','n','y',?,'y','n','n','y','y','n','y','n','y','y','democrat'
-'n','n','n','y','y','n','y','n','y','y','n','n','n','y','n','y','republican'
-'n','n','y','n','n','n','y','y','y','y','y','n','n','n','y','y','democrat'
-'n','n','n','y','y','y','y','n','n','y','n','y','n','y','y','y','republican'
-'n','n','n','y','y','y','n','n','n','y','n','y','y','y','n','y','republican'
-'y','n','n','y','y','y','n','n','n','y','n','y','y','y','n','n','republican'
-'y','n','y','n','n','n','y','y','y','y','n','y','n','n','y',?,'democrat'
-'n','y','y','y','y','y','y','y','y','n','n','y','y','y','n','y','republican'
-'n','y','n','n','n','y','y','n','y','n','y','n','n','n','y','y','democrat'
-'n','n','y','y','y','y','y','y','y','y','n','y','y','y','y','y','republican'
-'n','y','n','y','n','y','y','y','y','n','y','n','y','n','y',?,'democrat'
-'n','n','y','y','y','y','y','n','n','y','y','y','y','y','n','y','republican'
-'n','y','y','n','n','y','y','y','y','y','n',?,'n','n','y','y','democrat'
-'y','n','y','y','n','n','n','y','y','y','n','n','n','y','y','y','republican'
-'n','n','n','y','y','y','n','n','n','n','n','y','y','y','n','n','republican'
-'n','n','n','y','y','y','n','n','n','n','n','y','y','y','n','n','republican'
-'y','y','y','n','n','y','y','y','y','y','y','y','y','y','n',?,'democrat'
-'n','n','n','y','y','y','n','n','n','y',?,'y','y','y','n','y','republican'
-'y','n','y','n','n','y','y','y','y','y','n','n','y','n','n','y','democrat'
-'y','n','y','n','y','y','y','n','y','y','n','n','y','y','n',?,'democrat'
-'y','y','y','n','n','y','y','y','y','y','y','y','y','n','n','y','democrat'
-'y','y','n','y','y','y','n','n','n','y','y','n','y','n','n','n','republican'
-'y','y','n','y','y','y','n','n','n','n','y','n','y','y','n','y','republican'
-'n','y','n','n','y','y','n','n','n','y','y','n','y','y','n','n','democrat'
-'y','n','y','n','n','n','y','y','n','y','y','n','n','n','n',?,'democrat'
-'y','y','y','n','y','y','y','y','n','y','y','n','n','n','y',?,'democrat'
-'n','y','y','n','n','y','y','y','n','y','n','n','n','n','y','y','democrat'
-'n','y','n','y','y','y','n','n','n','n','n','n','y','y','n','y','republican'
-'y','y','y','n',?,'y','y','y','n','y',?,?,'n','n','y','y','democrat'
-'y','y','y','n',?,'n','y','y','y','y','n','n','n','n','y',?,'democrat'
-'n','y','y','y','y','y','n','n','n','n','y','y',?,'y','n','n','democrat'
-'n','y','y',?,'y','y','n','y','n','y',?,'n','y','y',?,'y','democrat'
-'n','y','n','y','y','y','n','n','n','n','n','y','y','y','n','y','republican'
-'n','y','n','y','y','y','n','n','n','n','y','y','n','y','n','n','democrat'
-'y',?,'y','n','n','n','y','y','y','n','y','n','n','n','y','y','democrat'
-'n','y','n','y','y','y',?,?,'n','n',?,?,'y',?,?,?,'republican'
-'n','n','n','y','y','y','n','n','n','n','n','y','y','y','n','y','republican'
-'n','n','n','y','y','y','n','n','n','n','n','y','y','y','n','y','republican'
-'y','y','y','n','n','y',?,'y','y','n','y','n','y','n','y','y','democrat'
-'y','y','y','n','y','y','y','y','y','y','y','n','y','y','n',?,'democrat'
-'y','y','n','y','y','y','n','n','n','n','y','n','y','y','n',?,'democrat'
-'y','y','y','n','y','y','n','y','y','y','y','n','n','n','n','y','democrat'
-'y','y','y','y','y','y','n','n','n','n','y','y','y','y','n','y','democrat'
-'y','y','n','n','y','y','n','n','n','n','y','y','y','y','y','n','democrat'
-'n',?,'y','n','y','y','n','y','n','n','y','n','n','n','n',?,'democrat'
-'y','y','y','n','y','y','n','y','y','n','y','n','n','y','n',?,'democrat'
-'n','y','y','y','y','y','n','n','n','n','n','y','y','y','n',?,'democrat'
-'y','n','y','n','n','n','y','y','y',?,'y','n','n','n','y',?,'democrat'
-?,?,'n','n',?,'y',?,'n','n','n','y','y','n','y','n',?,'democrat'
-'y','y','n','n','n','n','n','y','y','n','y','n','n','n','y','n','democrat'
-'y','y','n','y','y','y','n','n','n','n','y','y','y','y','n','y','republican'
-?,?,?,?,'n','y','n','y','y','n','n','y','y','n','n',?,'republican'
-'y','y',?,?,?,'y','n','n','n','n','y','n','y','n','n','y','democrat'
-'y','y','y',?,'n','n','n','y','n','n','y',?,'n','n','y','y','democrat'
-'y','y','y','n','y','y','n','y','n','n','y','n','y','n','y','y','democrat'
-'y','y','n','n','y',?,'n','n','n','n','y','n','y','y','n','y','democrat'
-'n','y','y','n','y','y','n','y','n','n','n','n','n','n','n','y','democrat'
-'n','y','n','y',?,'y','n','n','n','y','n','y','y','y','n','n','republican'
-'n','y','n','y','y','y','n',?,'n','n',?,?,?,'y','n',?,'republican'
-'n','y','n','y','y','y','n','n','n','y','y','y','y','y','n','n','republican'
-?,'n','y','y','n','y','y','y','y','y','n','y','n','y','n','y','republican'
-'n','y','n','y','y','y','n','n','n','y','n','y',?,'y','n','n','republican'
-'y','y','n','y','y','y','n','n','n','y','n','y','y','y','n','y','republican'
-'n','n','n','y','y','y','n','n','n','n','n','y','y','y','n','y','republican'
-'y','n','y','n','y','y','n','n','y','y','n','n','y','y','n','y','democrat'
-'n','n','n','y','y','y','n','n','n','n','y','y','y','y','n','n','democrat'
-'y','n','y','n','n','y','y','y','y','n','n','y',?,'y','y','y','democrat'
-'n','n','n','y','y','y','n','n','n','n','n','y','y','y','n','n','republican'
-'n','n','n','y','y','y','n','n','n','n','y','y','y','y','n','y','republican'
-'y','n','y','n','n','y','y','y','y','y','y','n','n','n','n','y','democrat'
-'n','n','n','y','y','y','n','n','n','y','n','y','y','y','n','y','republican'
-'y','y','y','y','y','y','y','y','n','y',?,?,?,'y','n','y','republican'
-'y','y','y','n','n','n','y','y','y','n','n','n','n','n','n','y','democrat'
-'n','y','y','n','n','y','y','y',?,'y','n','n','n','n','n','y','democrat'
-'y','y','n','y','y','y','n','n','n','y','n','n','y','y','n','y','republican'
-'y','y','y','n','n','n','y','y','y','y','y','n','y','n','n','y','democrat'
-'y','y','y','n','n','n','y','y','n','y','n','n','n','n','n','y','democrat'
-'y','y','y','n','n','n','y','y','y','n','n','n','n','n','n','y','democrat'
-'y','y','y','y','y','y','y','y','n','y','n','n','y','y','n','y','republican'
-'n','y','y','n','y','y','y','y','n','n','y','n','y','n','y','y','democrat'
-'n','n','y','n','n','y','y','y','y','n','y','n','n','n','y','y','democrat'
-'n','y','y','n','n','y','y','y','y','n','y','n','n','y','y','y','democrat'
-'n','y','y','n','n',?,'y','y','y','y','y','n',?,'y','y','y','democrat'
-'n','n','y','n','n','n','y','y','n','y','y','n','n','n','y',?,'democrat'
-'y','n','y','n','n','n','y','y','y','y','n','n','n','n','y','y','democrat'
-'n','n','n','y','y','y','y','y','n','y','n','y','y','y','n','y','republican'
-?,?,?,'n','n','n','y','y','y','y','n','n','y','n','y','y','democrat'
-'y','n','y','n',?,'n','y','y','y','y','n','y','n',?,'y','y','democrat'
-'n','n','y','y','y','y','n','n','y','y','n','y','y','y','n','y','republican'
-'n','n','y','n','n','n','y','y','y','y','n','n','n','n','n','y','democrat'
-'n',?,'n','y','y','y','n','n','n','n','y','y','y','y','n','y','republican'
-'n','n','n','y','y','y',?,?,?,?,'n','y','y','y','n','y','republican'
-'n','y','n','y','y','y','n','n','n','y','n','y','y','y',?,'n','republican'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_',?,'_n_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_y_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_n_','_y_','_n_','_y_','_n_','_n_','republican'
+'_n_','_n_','_n_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_n_','_y_','_n_','_y_',?,'_y_','republican'
+'_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_n_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_',?,'_y_','_y_','_y_','_n_',?,?,'_n_',?,?,?,'democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_',?,'_n_','_y_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_n_','_y_','_n_','_y_','republican'
+'_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','republican'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_n_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_n_',?,'_n_','_n_','_n_','_n_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_n_','_n_','_n_','_y_','_y_','_n_','_y_','_y_','_n_','_y_','_n_','_y_','_y_','_y_',?,'_y_','republican'
+'_y_','_n_','_n_','_y_','_y_','_n_','_y_','_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','republican'
+'_n_','_n_','_y_','_n_','_y_','_y_','_n_','_n_','_n_','_n_',?,'_n_','_y_','_y_','_n_','_n_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','republican'
+'_n_','_n_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','democrat'
+'_y_','_n_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_n_',?,'republican'
+'_y_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_',?,'_y_','_y_','_n_','_n_','republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_',?,'_y_','democrat'
+'_n_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_n_','_y_','_n_','_n_','_y_',?,'_y_',?,'_y_','_y_','_y_','_n_','_y_','_y_',?,'democrat'
+'_y_','_y_','_y_',?,'_n_','_y_','_y_','_y_','_y_','_n_','_y_','_n_','_y_','_n_',?,'_y_','democrat'
+'_y_','_y_','_y_','_n_','_y_','_y_','_n_','_y_','_n_','_y_','_y_','_n_','_y_','_y_','_y_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_y_','_y_','_n_','_y_','_n_','_y_','_y_','_n_','_y_','_y_','_n_',?,'democrat'
+'_y_','_n_','_y_','_n_',?,'_y_',?,'_y_','_y_','_y_','_n_','_n_','_y_','_y_','_n_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_',?,'_n_','_y_','_n_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_y_','_n_','_y_','_y_','_y_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','_y_','_y_','_y_','democrat'
+'_n_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_y_','_n_','_y_','_y_','_n_',?,'democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_',?,?,'_n_','_y_','_n_','_y_',?,?,?,?,'republican'
+'_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_y_','_y_','republican'
+'_y_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_',?,'_n_','_y_',?,'democrat'
+'_n_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_n_','_y_','_y_','_y_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_n_',?,'_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_',?,'republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_y_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_n_',?,'democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_y_','_n_','republican'
+'_n_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_n_','_n_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_y_','republican'
+'_n_','_y_','_y_','_y_','_y_','_y_','_y_',?,'_n_','_n_','_n_','_n_',?,?,'_y_',?,'republican'
+'_n_','_n_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','democrat'
+'_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_n_','_y_','_y_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_y_','_y_','_n_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_n_','_n_','_y_','democrat'
+'_y_','_y_','_y_','_n_',?,'_y_','_n_',?,'_n_','_n_','_y_','_n_','_y_','_y_','_n_',?,'democrat'
+'_y_','_y_','_y_','_n_','_y_','_y_','_n_','_y_',?,'_y_','_n_','_n_','_y_','_y_','_n_',?,'democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','republican'
+'_n_','_y_','_n_','_n_','_y_','_y_','_n_','_n_',?,'_n_','_n_','_y_','_y_','_y_','_n_','_y_','democrat'
+'_y_','_y_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_y_','_n_','_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_n_','_y_','democrat'
+'_y_',?,'_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_y_',?,'_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_y_',?,'democrat'
+'_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_y_','_y_','_n_','_n_','_y_','_y_','_y_',?,'_n_','_y_','_y_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_',?,'republican'
+'_n_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_y_','_n_','_n_','_y_',?,'_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','democrat'
+'_y_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_y_','republican'
+'_n_',?,'_y_',?,'_n_','_y_','_y_','_y_','_y_','_y_','_y_','_n_',?,?,'_y_','_y_','democrat'
+'_n_','_y_','_y_','_n_','_y_',?,'_y_','_n_','_n_','_y_','_y_','_n_','_y_','_n_','_y_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_n_','_y_','_n_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','republican'
+'_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_n_','_y_','_n_','_y_','_y_','_y_','republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_y_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_y_',?,'democrat'
+'_n_','_y_','_y_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_n_','_n_','_n_','_y_','_y_','_n_','_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_n_','_y_','_y_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','_y_','_y_','_y_','_y_','republican'
+'_n_','_y_','_n_','_y_','_n_','_y_','_y_','_y_','_y_','_n_','_y_','_n_','_y_','_n_','_y_',?,'democrat'
+'_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_',?,'_n_','_n_','_y_','_y_','democrat'
+'_y_','_n_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_y_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_y_','_y_','_y_','_y_','_n_',?,'democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_',?,'_y_','_y_','_y_','_n_','_y_','republican'
+'_y_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_n_','_n_','_y_','democrat'
+'_y_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','_y_','_n_','_n_','_y_','_y_','_n_',?,'democrat'
+'_y_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','democrat'
+'_y_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','republican'
+'_y_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_n_','_n_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_n_','_y_','_y_','_n_','_n_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_n_','_y_','_y_','_n_','_n_','_n_','_n_',?,'democrat'
+'_y_','_y_','_y_','_n_','_y_','_y_','_y_','_y_','_n_','_y_','_y_','_n_','_n_','_n_','_y_',?,'democrat'
+'_n_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_n_','_y_','republican'
+'_y_','_y_','_y_','_n_',?,'_y_','_y_','_y_','_n_','_y_',?,?,'_n_','_n_','_y_','_y_','democrat'
+'_y_','_y_','_y_','_n_',?,'_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_',?,'democrat'
+'_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_',?,'_y_','_n_','_n_','democrat'
+'_n_','_y_','_y_',?,'_y_','_y_','_n_','_y_','_n_','_y_',?,'_n_','_y_','_y_',?,'_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_n_','_y_','_n_','_n_','democrat'
+'_y_',?,'_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_y_','_n_','_y_','_y_','_y_',?,?,'_n_','_n_',?,?,'_y_',?,?,?,'republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_y_','_y_','_y_','_n_','_n_','_y_',?,'_y_','_y_','_n_','_y_','_n_','_y_','_n_','_y_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_y_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','_y_','_n_',?,'democrat'
+'_y_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_n_',?,'democrat'
+'_y_','_y_','_y_','_n_','_y_','_y_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','democrat'
+'_y_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_y_','democrat'
+'_y_','_y_','_n_','_n_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','democrat'
+'_n_',?,'_y_','_n_','_y_','_y_','_n_','_y_','_n_','_n_','_y_','_n_','_n_','_n_','_n_',?,'democrat'
+'_y_','_y_','_y_','_n_','_y_','_y_','_n_','_y_','_y_','_n_','_y_','_n_','_n_','_y_','_n_',?,'democrat'
+'_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_',?,'democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_',?,'_y_','_n_','_n_','_n_','_y_',?,'democrat'
+?,?,'_n_','_n_',?,'_y_',?,'_n_','_n_','_n_','_y_','_y_','_n_','_y_','_n_',?,'democrat'
+'_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_y_','_n_','democrat'
+'_y_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_y_','republican'
+?,?,?,?,'_n_','_y_','_n_','_y_','_y_','_n_','_n_','_y_','_y_','_n_','_n_',?,'republican'
+'_y_','_y_',?,?,?,'_y_','_n_','_n_','_n_','_n_','_y_','_n_','_y_','_n_','_n_','_y_','democrat'
+'_y_','_y_','_y_',?,'_n_','_n_','_n_','_y_','_n_','_n_','_y_',?,'_n_','_n_','_y_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_y_','_y_','_n_','_y_','_n_','_n_','_y_','_n_','_y_','_n_','_y_','_y_','democrat'
+'_y_','_y_','_n_','_n_','_y_',?,'_n_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_n_','_y_','democrat'
+'_n_','_y_','_y_','_n_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_n_','_n_','_n_','_n_','_y_','democrat'
+'_n_','_y_','_n_','_y_',?,'_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_',?,'_n_','_n_',?,?,?,'_y_','_n_',?,'republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','republican'
+?,'_n_','_y_','_y_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','_n_','_y_','_n_','_y_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_',?,'_y_','_n_','_n_','republican'
+'_y_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_y_','_n_','_y_','_n_','_y_','_y_','_n_','_n_','_y_','_y_','_n_','_n_','_y_','_y_','_n_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','democrat'
+'_y_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_y_',?,'_y_','_y_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','republican'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_y_','republican'
+'_y_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_y_','_y_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_y_',?,?,?,'_y_','_n_','_y_','republican'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_n_','_y_','democrat'
+'_n_','_y_','_y_','_n_','_n_','_y_','_y_','_y_',?,'_y_','_n_','_n_','_n_','_n_','_n_','_y_','democrat'
+'_y_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_n_','_y_','_y_','_n_','_y_','republican'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','democrat'
+'_y_','_y_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_n_','_y_','democrat'
+'_y_','_y_','_y_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_y_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_n_','_y_','_n_','_y_','_y_','democrat'
+'_n_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_y_','_y_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_y_','_n_','_n_','_y_','_y_','_y_','democrat'
+'_n_','_y_','_y_','_n_','_n_',?,'_y_','_y_','_y_','_y_','_y_','_n_',?,'_y_','_y_','_y_','democrat'
+'_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_n_','_y_','_y_','_n_','_n_','_n_','_y_',?,'democrat'
+'_y_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','democrat'
+'_n_','_n_','_n_','_y_','_y_','_y_','_y_','_y_','_n_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+?,?,?,'_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_n_','_y_','_y_','democrat'
+'_y_','_n_','_y_','_n_',?,'_n_','_y_','_y_','_y_','_y_','_n_','_y_','_n_',?,'_y_','_y_','democrat'
+'_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_y_','_y_','_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_n_','_y_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_n_','_y_','democrat'
+'_n_',?,'_n_','_y_','_y_','_y_','_n_','_n_','_n_','_n_','_y_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_n_','_n_','_y_','_y_','_y_',?,?,?,?,'_n_','_y_','_y_','_y_','_n_','_y_','republican'
+'_n_','_y_','_n_','_y_','_y_','_y_','_n_','_n_','_n_','_y_','_n_','_y_','_y_','_y_',?,'_n_','republican'
 %
 %
 %

@@ -150,7 +150,9 @@ def calculate_mutual_similarity(
         Tuple[float, float, float]: mutual_score, normalized_mutual_score, adjusted_mutual_score
     """
     mi = mutual_info_score(true_labels, pred_labels)
-    nmi = normalized_mutual_info_score(true_labels, pred_labels)
+    nmi = normalized_mutual_info_score(
+        true_labels, pred_labels, average_method="geometric"
+    )
     ami = adjusted_mutual_info_score(true_labels, pred_labels)
     return mi, nmi, ami
 

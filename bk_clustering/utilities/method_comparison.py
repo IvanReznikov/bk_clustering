@@ -13,6 +13,7 @@ from sklearn.cluster import (
     SpectralClustering,
 )
 from sklearn.mixture import GaussianMixture
+import hdbscan
 
 
 def get_data(dataset_name: str):
@@ -416,4 +417,33 @@ def run_density_peak(dataset_names: List, number_of_clusters: List):
         )  # Collect and store results
 
     filename = f"./../results/density_peak_results.json"  # Define the filename to save the results
+    load_save.save_json(results, filename)  # Save the results to a JSON file
+
+
+def run_hdbscan(dataset_names: List, number_of_clusters: List, random_state=1):
+    results = {}  # Initialize an empty dictionary to store the results
+
+    # Loop through each dataset and corresponding number of clusters
+    for dataset_name, n_clusters in zip(dataset_names, number_of_clusters):
+        try:
+            start = timer()  # Record the start time of model evaluation
+            X, true_labels = get_data(
+                dataset_name
+            )  # Load the dataset and extract true labels
+
+            model = hdbscan.HDBSCAN()
+            model.fit(X)  # Train the GMM model
+            pred_labels = model.labels_  # Cluster labels
+            error_results = metrics.calculate_metrics(
+                true_labels, pred_labels
+            )  # Calculate error metrics
+            results[dataset_name] = load_save.format_results(
+                error_results, timer() - start
+            )  # Collect and store results
+        except Exception as e:
+            print(e)  # Print any exception that occurs during model evaluation
+
+    filename = (
+        f"./../results/hdbscan_results.json"  # Define the filename to save the results
+    )
     load_save.save_json(results, filename)  # Save the results to a JSON file

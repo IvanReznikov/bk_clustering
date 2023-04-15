@@ -296,7 +296,6 @@ def run_optics(dataset_names: List, number_of_clusters: List):
 
     # Loop through each dataset and corresponding number of clusters
     for dataset_name, n_clusters in zip(dataset_names, number_of_clusters):
-        print(dataset_name)
         start = timer()  # Record the start time of model evaluation
         X, true_labels = get_data(
             dataset_name
@@ -360,7 +359,6 @@ def run_gmm(dataset_names: List, number_of_clusters: List, random_state=1):
 
     # Loop through each dataset and corresponding number of clusters
     for dataset_name, n_clusters in zip(dataset_names, number_of_clusters):
-        print(dataset_name)
         # as it was discovered for some datasets ("jm1", "KDDTest+", etc.) GaussianMixture throws an error
         try:
             start = timer()  # Record the start time of model evaluation
@@ -401,7 +399,6 @@ def run_density_peak(dataset_names: List, number_of_clusters: List):
 
     # Loop through each dataset and corresponding number of clusters
     for dataset_name, n_clusters in zip(dataset_names, number_of_clusters):
-        print(dataset_name)
         start = timer()  # Record the start time of model evaluation
         X, true_labels = get_data(
             dataset_name
@@ -432,7 +429,7 @@ def run_hdbscan(dataset_names: List, number_of_clusters: List, random_state=1):
             )  # Load the dataset and extract true labels
 
             model = hdbscan.HDBSCAN()
-            model.fit(X)  # Train the GMM model
+            model.fit(X)  # Train the hdbscan model
             pred_labels = model.labels_  # Cluster labels
             error_results = metrics.calculate_metrics(
                 true_labels, pred_labels

@@ -4,6 +4,8 @@ data/cifar10small
 gisette.zip
 mnistrotationbackimagenew.zip
 
+results/predictions
+
 # Dev Environment
 env_dev_bk_clustering
 

@@ -15,8 +15,8 @@ def preprocessing(df: pd.DataFrame) -> pd.DataFrame:
     df = df.apply(pd.to_numeric, errors="ignore")
     df = string_handling(df)
     df = numeric_handling(df)
-    columns = [x for x in df.columns if x != "class"] + ["class"]
     df = df.dropna(axis=1)
+    columns = [x for x in df.columns if x != "class"] + ["class"]
     return df[columns]
 
 

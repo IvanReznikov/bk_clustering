@@ -17,6 +17,7 @@ from bk_clustering.utilities import (
     tree_traversal,
     load_save,
     plot_utilities,
+    postprocessing,
 )
 
 
@@ -114,7 +115,7 @@ class BurjKhalifaClustering:
                 node_tree,
             ) = self.calculate_clusters(X, linkage_type=self.linkage)
 
-        self.labels_ = list(result_dict.values())
+        self.labels_ = postprocessing.convert_to_array(result_dict.values())
         self.n_clusters = len(set(self.labels_))
         self.dtf_ = dtf
         self.cluster_info_ = cluster_info

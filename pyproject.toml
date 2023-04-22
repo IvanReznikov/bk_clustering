@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "bk-clustering"
-version = "0.2"
-description = "The package is the implementation of the Burj-Khalifa clustering algorithm"
+version = "0.3"
+description = "The package is the implementation of the Burj Khalifa clustering algorithm"
 authors = ["Ivan Reznikov <ivanreznikov@gmail.com>"]
 readme = "README.md"
 packages = [{include = "bk_clustering"}]

@@ -1,5 +1,6 @@
 from timeit import default_timer as timer
 from typing import List
+import numpy as np
 from utilities import load_save, metrics, density_peak
 from sklearn.cluster import (
     KMeans,
@@ -444,3 +445,186 @@ def run_hdbscan(dataset_names: List, number_of_clusters: List, random_state=1):
         f"./../results/hdbscan_results.json"  # Define the filename to save the results
     )
     load_save.save_json(results, filename)  # Save the results to a JSON file
+
+
+def generate_corr_matrix(dataset_size_dict):
+    import itertools
+    from collections import OrderedDict
+    from bk_clustering import postprocessing, metrics, load_save
+
+    filename = "./../results/predictions/bk_clustering_predictions.json"
+    bk_clustering_predictions = {
+        eval(k): v
+        for (k, v) in OrderedDict(sorted(load_save.load_json(filename).items())).items()
+    }
+
+    filename = "./../results/predictions/k_means_predictions.json"
+    k_means_predictions = {
+        eval(k): v
+        for (k, v) in OrderedDict(sorted(load_save.load_json(filename).items())).items()
+    }
+
+    filename = "./../results/predictions/mini_batch_kmeans_predictions.json"
+    mini_batch_kmeans_predictions = {
+        eval(k): v
+        for (k, v) in OrderedDict(sorted(load_save.load_json(filename).items())).items()
+    }
+
+    filename = "./../results/predictions/affinity_predictions.json"
+    affinity_predictions = {
+        eval(k): v
+        for (k, v) in OrderedDict(sorted(load_save.load_json(filename).items())).items()
+    }
+
+    filename = "./../results/predictions/agglomerative_predictions.json"
+    agglomerative_predictions = {
+        eval(k): v
+        for (k, v) in OrderedDict(sorted(load_save.load_json(filename).items())).items()
+    }
+
+    filename = "./../results/predictions/birch_predictions.json"
+    birch_predictions = {
+        eval(k): v
+        for (k, v) in OrderedDict(sorted(load_save.load_json(filename).items())).items()
+    }
+
+    filename = "./../results/predictions/hdbscan_predictions.json"
+    hdbscan_predictions = {
+        eval(k): v
+        for (k, v) in OrderedDict(sorted(load_save.load_json(filename).items())).items()
+    }
+
+    filename = "./../results/predictions/dbscan_predictions.json"
+    dbscan_predictions = {
+        eval(k): v
+        for (k, v) in OrderedDict(sorted(load_save.load_json(filename).items())).items()
+    }
+
+    filename = "./../results/predictions/mean_shift_predictions.json"
+    mean_shift_predictions = {
+        eval(k): v
+        for (k, v) in OrderedDict(sorted(load_save.load_json(filename).items())).items()
+    }
+
+    filename = "./../results/predictions/optics_predictions.json"
+    optics_predictions = {
+        eval(k): v
+        for (k, v) in OrderedDict(sorted(load_save.load_json(filename).items())).items()
+    }
+
+    filename = "./../results/predictions/gaussian_mixture_predictions.json"
+    gaussian_mixture_predictions = {
+        eval(k): v
+        for (k, v) in OrderedDict(sorted(load_save.load_json(filename).items())).items()
+    }
+
+    filename = "./../results/predictions/density_peak_predictions.json"
+    density_peak_predictions = {
+        eval(k): v
+        for (k, v) in OrderedDict(sorted(load_save.load_json(filename).items())).items()
+    }
+
+    prediction_dict = {
+        "bk_clustering": [
+            postprocessing.convert_to_array(eval(x))
+            for x in bk_clustering_predictions.values()
+        ],
+        "kmeans": [eval(x) for x in k_means_predictions.values()],
+        "affinity": [eval(x) for x in affinity_predictions.values()],
+        "dbscan": [eval(x) for x in dbscan_predictions.values()],
+        "hdbscan": [eval(x) for x in hdbscan_predictions.values()],
+        "density_peak": [eval(x) for x in density_peak_predictions.values()],
+        "mean_shift_predictions": [eval(x) for x in mean_shift_predictions.values()],
+        "optics": [eval(x) for x in optics_predictions.values()],
+        "agglomerative": [eval(x) for x in agglomerative_predictions.values()],
+        "birch": [eval(x) for x in birch_predictions.values()],
+        "gmm": [eval(x) for x in gaussian_mixture_predictions.values()],
+        "mb_kmeans": [eval(x) for x in mini_batch_kmeans_predictions.values()],
+    }
+
+    raw_metrics_dict = {}
+    for key in list(itertools.combinations(prediction_dict, 2)):
+        raw_metrics_dict[key] = {}
+        raw_metrics_dict[key]["v_measure"] = np.array(
+            [
+                list(
+                    metrics.calculate_v_measure(ds1, ds2)
+                    for ds1, ds2 in zip(
+                        prediction_dict[key[0]], prediction_dict[key[1]]
+                    )
+                )
+            ]
+        )
+        raw_metrics_dict[key]["mutual_similarity"] = np.array(
+            [
+                list(
+                    metrics.calculate_mutual_similarity(ds1, ds2)
+                    for ds1, ds2 in zip(
+                        prediction_dict[key[0]], prediction_dict[key[1]]
+                    )
+                )
+            ]
+        )
+        raw_metrics_dict[key]["rand_index"] = np.array(
+            [
+                list(
+                    metrics.calculate_rand_index(ds1, ds2)
+                    for ds1, ds2 in zip(
+                        prediction_dict[key[0]], prediction_dict[key[1]]
+                    )
+                )
+            ]
+        )
+        raw_metrics_dict[key]["fm_score"] = np.array(
+            [
+                list(
+                    metrics.calculate_fm_score(ds1, ds2)
+                    for ds1, ds2 in zip(
+                        prediction_dict[key[0]], prediction_dict[key[1]]
+                    )
+                )
+            ]
+        )
+
+    final_metrics_dict = {}
+    for key in list(itertools.combinations(prediction_dict, 2)):
+        final_metrics_dict[key] = {}
+        final_metrics_dict[key]["v_measure_0"] = raw_metrics_dict[key]["v_measure"][
+            :, :, 0
+        ][0]
+        final_metrics_dict[key]["v_measure_1"] = raw_metrics_dict[key]["v_measure"][
+            :, :, 1
+        ][0]
+        final_metrics_dict[key]["v_measure_2"] = raw_metrics_dict[key]["v_measure"][
+            :, :, 2
+        ][0]
+        final_metrics_dict[key]["mutual_similarity_0"] = raw_metrics_dict[key][
+            "mutual_similarity"
+        ][:, :, 0][0]
+        final_metrics_dict[key]["mutual_similarity_1"] = raw_metrics_dict[key][
+            "mutual_similarity"
+        ][:, :, 1][0]
+        final_metrics_dict[key]["mutual_similarity_2"] = raw_metrics_dict[key][
+            "mutual_similarity"
+        ][:, :, 2][0]
+        final_metrics_dict[key]["rand_index_0"] = raw_metrics_dict[key]["rand_index"][
+            :, :, 0
+        ][0]
+        final_metrics_dict[key]["rand_index_1"] = raw_metrics_dict[key]["rand_index"][
+            :, :, 1
+        ][0]
+        final_metrics_dict[key]["fm_score"] = raw_metrics_dict[key]["fm_score"][:][0]
+
+    json_dict = {k: {} for k in final_metrics_dict}
+    for k in final_metrics_dict:
+        for m in final_metrics_dict[k]:
+            json_dict[k][m] = load_save.encode_json(
+                {
+                    dataset: metric
+                    for (dataset, metric) in zip(
+                        dataset_size_dict, final_metrics_dict[k][m]
+                    )
+                }
+            )
+
+    load_save.save_json(json_dict, "./../results/aggregations/aggregated.json")

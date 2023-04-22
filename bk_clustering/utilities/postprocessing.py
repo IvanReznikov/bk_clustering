@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def convert_to_array(lst):
     """
     Convert a list of values to a NumPy array of indices based on a sorted unique set of values.

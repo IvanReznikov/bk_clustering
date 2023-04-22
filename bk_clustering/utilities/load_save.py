@@ -91,6 +91,10 @@ def save_json(data, filename):
         ujson.dump(data, outfile)  # Use ujson.dump to write data to the JSON file
 
 
+def encode_json(data):
+    return ujson.encode(data)
+
+
 def load_json(filename):
     with open(filename) as outfile:
         data = ujson.load(outfile)

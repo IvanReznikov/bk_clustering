@@ -1,4 +1,4 @@
-from utilities import load_save, metrics, method_comparison
+from utilities import load_save, metrics #method_comparison
 import os
 from timeit import default_timer as timer
 from main import BurjKhalifaClustering

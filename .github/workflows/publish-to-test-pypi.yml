@@ -42,52 +42,39 @@ jobs:
   test:
     needs: build
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python: ["3.10", "3.11"]
 
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+    steps: 
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-    - name: Install python
-      uses: actions/setup-python@v4
+    - name: Install Python 3.10
+      uses: actions/setup-python@v2
       with:
-        python-version: ${{ matrix.python }}
-        cache: 'pip'
-        cache-dependency-path: "poetry.lock"
+        python-version: '3.10'
 
-    - name: Download built package
-      uses: actions/download-artifact@v3
-      with:
-        name: dist
-    
-    - name: Install pytest
-      shell: bash
-      run: pip install pytest
+    - name: Install Poetry packaging manager
+      run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
 
-    - name: Install Poetry
-      uses: snok/install-poetry@v1
-      with:
-        virtualenvs-create: true
-        virtualenvs-in-project: true
-        installer-parallel: true
+    - name: Configure Poetry
+      run: |
+        poetry config virtualenvs.create true
+        poetry config virtualenvs.in-project true
+
     - name: Load cached venv
+      id: cached-poetry-dependencies
       uses: actions/cache@v2
       with:
         path: .venv
-        key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
-    
-    - name: Install dependencies
-      if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
-      # We don't install -E qstrader and run legacy tests on CI as they
-      # download too much data
-      run: |          
-        poetry install --no-root 
+        key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
 
-    - name: Run tests
-      shell: bash
+    - name: Install project dependencies
+      run: poetry install
+      if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+
+    - name: Run test
       run: poetry run pytest
+
+
   # Publish to pypi on version change
   # This is based on https://github.com/coveooss/pypi-publish-with-poetry
   publish:

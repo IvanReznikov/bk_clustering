@@ -62,26 +62,28 @@ jobs:
       with:
         name: dist
     
-    - name: Install poetry
-      uses: Gr1N/setup-poetry@v7
-
-    - name: Configure poetry
-      run: |
-        python -m poetry config virtualenvs.in-project true
-
-    - name: Cache the virtualenv
+    - name: Install Poetry
+      uses: snok/install-poetry@v1
+      with:
+        virtualenvs-create: true
+        virtualenvs-in-project: true
+        installer-parallel: true
+    - name: Load cached venv
       uses: actions/cache@v2
       with:
-        path: ./.venv
-        key: ${{ runner.os }}-venv-${{ hashFiles('**/poetry.lock') }}
-
+        path: .venv
+        key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
+    
     - name: Install dependencies
-      run: |
-        python -m poetry install
+      if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+      # We don't install -E qstrader and run legacy tests on CI as they
+      # download too much data
+      run: |          
+        poetry install --no-root 
 
     - name: Run tests
-      run: |
-        python -m poetry run python -m pytest -sxv
+      shell: bash
+      run: poetry run pytest
 
   # Publish to pypi on version change
   # This is based on https://github.com/coveooss/pypi-publish-with-poetry

@@ -65,17 +65,23 @@ jobs:
     - name: Install poetry
       uses: Gr1N/setup-poetry@v7
 
-    - name: Install pytest
-      shell: bash
-      run: pip install pytest
+    - name: Configure poetry
+      run: |
+        python -m poetry config virtualenvs.in-project true
+
+    - name: Cache the virtualenv
+      uses: actions/cache@v2
+      with:
+        path: ./.venv
+        key: ${{ runner.os }}-venv-${{ hashFiles('**/poetry.lock') }}
 
     - name: Install dependencies
-      shell: bash
-      run: poetry install --no-root
-    
+      run: |
+        python -m poetry install
+
     - name: Run tests
-      shell: bash
-      run: poetry run pytest
+      run: |
+        python -m poetry run python -m pytest -sxv
 
   # Publish to pypi on version change
   # This is based on https://github.com/coveooss/pypi-publish-with-poetry

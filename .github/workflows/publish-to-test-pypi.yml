@@ -62,11 +62,9 @@ jobs:
       with:
         name: dist
     
-    - name: Install pura and pytest
+    - name: Install pytest
       shell: bash
-      run: |
-        WHL_NAME=$(ls pura-*.whl)
-        pip install ${WHL_NAME}[experiments,entmoot] pytest
+      run: pip install pytest
     - name: Run tests
       shell: bash
       #run: pura-tests

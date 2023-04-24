@@ -1,80 +1,69 @@
 name: Publish Burj Khalifa to PyPI
 
-# https://kobifelton.com/notes/fighting-with-github-actions
 on:
   push:
-  pull_request:
     branches:
-      # Branches from forks have the form 'user:branch-name' so we only run
-      # this job on pull_request events for branches that look like fork
-      # branches. Without this we would end up running this job twice for non
-      # forked PRs, once for the push and then once for opening the PR.
-    - '**:**'
+      - main
+  pull_request:
 
 jobs:
-  # Build the package
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10"]
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+      - name: Install Poetry
+        run: pipx install poetry
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "poetry"
+      - name: Install dependencies
+        run: poetry install
+      - name: Test with Pytest
+        run: poetry run pytest
+      #- name: Lint with flake8
+      #  run: poetry run flake8
 
-    - name: Install python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
-
-    - name: Install poetry
-      uses: Gr1N/setup-poetry@v7
-
-    - name: Build package
-      run: poetry build
-
-    - name: Upload built package
-      uses: actions/upload-artifact@v3
-      with:
-        name: dist
-        path: dist/
-        retention-days: 1
-
-  # Run pytest using built package
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps: 
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Install Python 3.10
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.10'
-
-    - name: Install Poetry packaging manager
-      run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
-
-    - name: Configure Poetry
-      run: |
-        poetry config virtualenvs.create true
-        poetry config virtualenvs.in-project true
-
-    - name: Load cached venv
-      id: cached-poetry-dependencies
-      uses: actions/cache@v2
-      with:
-        path: .venv
-        key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-
-    - name: Install project dependencies
-      run: poetry install
-      if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
-
-    - name: Run test
-      run: poetry run pytest
-
-
+  # release:
+  #   needs: build
+  #   if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+  #   runs-on: ubuntu-latest
+  #   strategy:
+  #     matrix:
+  #       python-version: ["3.10"]
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #       with:
+  #         fetch-depth: 0
+  #     - name: Install Poetry
+  #       run: pipx install poetry
+  #     - name: Set up Python ${{ matrix.python-version }}
+  #       uses: actions/setup-python@v4
+  #       with:
+  #         python-version: ${{ matrix.python-version }}
+  #         cache: "poetry"
+  #     - name: Install dependencies
+  #       run: poetry install
+  #     - name: Prepare package for release
+  #       env:
+  #         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       run: |
+  #         git config user.name github-actions
+  #         git config user.email github-actions@github.com
+  #         poetry run semantic-release publish
+      
+  #     - name: Publish to TestPyPI
+  #       uses: pypa/gh-action-pypi-publish@release/v1
+  #       with:
+  #         user: __token__
+  #         password: ${{ secrets.PYPI_TOKEN }}
+  #         repository_url: https://test.pypi.org/legacy/
+      
   # Publish to pypi on version change
   # This is based on https://github.com/coveooss/pypi-publish-with-poetry
   publish:

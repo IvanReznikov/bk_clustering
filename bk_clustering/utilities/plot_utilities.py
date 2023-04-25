@@ -132,19 +132,40 @@ def get_dendrogram(dtf, title=None, figsize=(14, 10), **kwargs):
     return shc.dendrogram(dtf, **kwargs)
 
 
-def draw_tree(tree, maxlevel=5):
-    """
-    Draw a tree structure using ASCII art representation.
+def draw_tree(tree, maxlevel=5, params=[], params_names=True):
+    supported_params = [
+        "ancestors",
+        "anchestors",
+        "chain_cover",
+        "chain_solidity",
+        "children",
+        "children_count",
+        "depth",
+        "descendants",
+        "height",
+        "id",
+        "is_leaf",
+        "is_root",
+        "iter_path_reverse",
+        "leaves",
+        "parent",
+        "path",
+        "root",
+        "self_cover",
+        "separator",
+        "siblings",
+        "solidity",
+    ]
+    def filter_params(params, supported_params):
+        correct_params = []
+        for param in params:
+            if param not in supported_params:
+                print(f"{param} not supported. List of supported params: {supported_params}")
+            else:
+                correct_params.append(param)
+        return correct_params
 
-    Args:
-        tree: Tree object
-            The tree structure to be drawn.
-        maxlevel: int, optional (default=5)
-            The maximum level of the tree to be drawn.
-
-    Returns:
-        None
-    """
     for pre, fill, node in RenderTree(tree, maxlevel=maxlevel):
-        # Print the tree node's id, indented with pre and fill characters
-        print("%s%s" % (pre, node.id))
+        node_params = [f"{param}:{getattr(node, param):5.2f}" for param in filter_params(params, supported_params)]
+        node_str = " ".join(node_params) if params_names else " ".join([param.split(":")[1] for param in node_params])
+        print(f"{pre}{node.id} {node_str}")

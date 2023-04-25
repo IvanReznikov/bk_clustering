@@ -4,7 +4,7 @@ import pandas as pd
 from scipy.io import arff as scipy_arff
 from bk_clustering.utilities import preprocessing
 import ujson
-
+import json
 
 def read_arff(
     folder, filename, skip_columns=[], miss_thresh_hard=5, miss_thresh_rel=0.05
@@ -111,3 +111,16 @@ def format_results(results: dict, time: float) -> dict:
     obj = {**results}  # Create a shallow copy of the results dictionary
     obj["performance_s"] = time  # Add the performance time to the results
     return obj
+
+def encode_json(data):
+    return json.dumps(data, cls=NpEncoder)
+
+class NpEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, np.integer):
+            return int(obj)
+        if isinstance(obj, np.floating):
+            return float(obj)
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()
+        return super(NpEncoder, self).default(obj)

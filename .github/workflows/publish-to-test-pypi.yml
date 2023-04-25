@@ -1,145 +1,167 @@
-name: Publish Burj Khalifa to PyPI
+# name: Publish Burj Khalifa to PyPI
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
+# # https://kobifelton.com/notes/fighting-with-github-actions
+# on:
+#   push:
+#   pull_request:
+#     branches:
+#       # Branches from forks have the form 'user:branch-name' so we only run
+#       # this job on pull_request events for branches that look like fork
+#       # branches. Without this we would end up running this job twice for non
+#       # forked PRs, once for the push and then once for opening the PR.
+#     - '**:**'
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.10"]
+# jobs:
+#   # Build the package
+#   build:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v3
-      - name: Install Poetry
-        run: pipx install poetry
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
-        with:
-          python-version: ${{ matrix.python-version }}
-          cache: "poetry"
-      - name: Install dependencies
-        run: poetry install
-      - name: Test with Pytest
-        run: poetry run pytest
-      #- name: Lint with flake8
-      #  run: poetry run flake8
+#     steps:
+#     - name: Checkout repository
+#       uses: actions/checkout@v3
 
-  # release:
-  #   needs: build
-  #   if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-  #   runs-on: ubuntu-latest
-  #   strategy:
-  #     matrix:
-  #       python-version: ["3.10"]
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #       with:
-  #         fetch-depth: 0
-  #     - name: Install Poetry
-  #       run: pipx install poetry
-  #     - name: Set up Python ${{ matrix.python-version }}
-  #       uses: actions/setup-python@v4
-  #       with:
-  #         python-version: ${{ matrix.python-version }}
-  #         cache: "poetry"
-  #     - name: Install dependencies
-  #       run: poetry install
-  #     - name: Prepare package for release
-  #       env:
-  #         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #       run: |
-  #         git config user.name github-actions
-  #         git config user.email github-actions@github.com
-  #         poetry run semantic-release publish
-      
-  #     - name: Publish to TestPyPI
-  #       uses: pypa/gh-action-pypi-publish@release/v1
-  #       with:
-  #         user: __token__
-  #         password: ${{ secrets.PYPI_TOKEN }}
-  #         repository_url: https://test.pypi.org/legacy/
-      
-  # Publish to pypi on version change
-  # This is based on https://github.com/coveooss/pypi-publish-with-poetry
-  publish:
-    needs: build
-    runs-on: ubuntu-latest
+#     - name: Install python
+#       uses: actions/setup-python@v4
+#       with:
+#         python-version: '3.10'
 
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+#     - name: Install poetry
+#       uses: Gr1N/setup-poetry@v7
 
-    - name: Install python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
+#     - name: Build package
+#       run: poetry build
 
-    - name: Download built package
-      uses: actions/download-artifact@v3
-      with:
-        name: dist
-        path: dist/
+#     - name: Upload built package
+#       uses: actions/upload-artifact@v3
+#       with:
+#         name: dist
+#         path: dist/
+#         retention-days: 1
 
-    - name: Install poetry
-      uses: Gr1N/setup-poetry@v7
+#   # Run pytest using built package
+#   test:
+#     needs: build
+#     runs-on: ubuntu-latest
+#     strategy:
+#       matrix:
+#         python: ["3.10", "3.11"]
 
-    - name: Install coveo-pypi-cli
-      run: pip install coveo-pypi-cli
+#     steps:
+#     - name: Checkout repository
+#       uses: actions/checkout@v3
 
-    - name: Determine the version for this release from the build
-      id: current
-      run: |
-        BUILD_VER="$(ls dist/pura-*.tar.gz)"
-        echo "Path: $BUILD_VER"
-        if [[ $BUILD_VER =~ (pura-)([^,][0-9.]{4}) ]]; then
-            echo "::set-output name=version::${BASH_REMATCH[2]}"
-            echo "Version of build: ${BASH_REMATCH[2]}"
-        else
-            echo "No version found found"
-        fi
+#     - name: Install python
+#       uses: actions/setup-python@v4
+#       with:
+#         python-version: ${{ matrix.python }}
+#         cache: 'pip'
+#         cache-dependency-path: "poetry.lock"
+
+#     - name: Download built package
+#       uses: actions/download-artifact@v3
+#       with:
+#         name: dist
+    
+#     - name: Install pytest
+#       shell: bash
+#       run: pip install pytest
+
+#     - name: Install Poetry
+#       uses: snok/install-poetry@v1
+#       with:
+#         virtualenvs-create: true
+#         virtualenvs-in-project: true
+#         installer-parallel: true
+#     - name: Load cached venv
+#       uses: actions/cache@v2
+#       with:
+#         path: .venv
+#         key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
+    
+#     - name: Install dependencies
+#     #if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+#       run: |          
+#         poetry install --no-root --no-interaction
+
+#     - name: Run tests
+#       shell: bash
+#       run: poetry run pytest
+#   # Publish to pypi on version change
+#   # This is based on https://github.com/coveooss/pypi-publish-with-poetry
+#   publish:
+#     needs: build
+#     runs-on: ubuntu-latest
+
+#     steps:
+#     - name: Checkout repository
+#       uses: actions/checkout@v3
+
+#     - name: Install python
+#       uses: actions/setup-python@v4
+#       with:
+#         python-version: '3.10'
+
+#     - name: Download built package
+#       uses: actions/download-artifact@v3
+#       with:
+#         name: dist
+#         path: dist/
+
+#     - name: Install poetry
+#       uses: Gr1N/setup-poetry@v7
+
+#     - name: Install coveo-pypi-cli
+#       run: pip install coveo-pypi-cli
+
+#     - name: Determine the version for this release from the build
+#       id: current
+#       run: |
+#         BUILD_VER="$(ls dist/pura-*.tar.gz)"
+#         echo "Path: $BUILD_VER"
+#         if [[ $BUILD_VER =~ (pura-)([^,][0-9.]{4}) ]]; then
+#             echo "::set-output name=version::${BASH_REMATCH[2]}"
+#             echo "Version of build: ${BASH_REMATCH[2]}"
+#         else
+#             echo "No version found found"
+#         fi
         
-    - name: Get latest published version
-      id: published
-      run: |
-        PUB_VER="$(pypi current-version pura)"
-        echo "::set-output name=version::$PUB_VER"
-        echo "Latest published version: $PUB_VER"
+#     - name: Get latest published version
+#       id: published
+#       run: |
+#         PUB_VER="$(pypi current-version pura)"
+#         echo "::set-output name=version::$PUB_VER"
+#         echo "Latest published version: $PUB_VER"
     
 
-    - name: Publish to pypi if new version
-      if: (steps.current.outputs.version != steps.published.outputs.version)
-      shell: bash
-      run: |
-        poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
-        if [[ '${{ github.ref_name }}' == 'main' ]]; then
-          poetry publish 
-        else
-          echo "Dry run of publishing the package"
-          poetry publish --dry-run
-        fi
-    - name: Tag repository
-      shell: bash
-      id: get-next-tag
-      if: (steps.current.outputs.version != steps.published.outputs.version)
-      run: |
-        TAG_NAME=${{ steps.current.outputs.version }}
-        echo "::set-output name=tag-name::$TAG_NAME"
-        echo "This release will be tagged as $TAG_NAME"
-        git config user.name "github-actions"
-        git config user.email "actions@users.noreply.github.com"
-        git tag --annotate --message="Automated tagging system" $TAG_NAME ${{ github.sha }}
-    - name: Push the tag
-      if: (steps.current.outputs.version != steps.published.outputs.version)
-      env:
-        TAG_NAME: ${{ steps.current.outputs.version }}
-      run: |
-        if [[ ${{ github.ref_name }} == 'main' ]]; then
-          git push origin $TAG_NAME
-        else
-          echo "If this was the main branch, I would push a new tag named $TAG_NAME"
-        fi
+#     - name: Publish to pypi if new version
+#       if: (steps.current.outputs.version != steps.published.outputs.version)
+#       shell: bash
+#       run: |
+#         poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
+#         if [[ '${{ github.ref_name }}' == 'main' ]]; then
+#           poetry publish 
+#         else
+#           echo "Dry run of publishing the package"
+#           poetry publish --dry-run
+#         fi
+#     - name: Tag repository
+#       shell: bash
+#       id: get-next-tag
+#       if: (steps.current.outputs.version != steps.published.outputs.version)
+#       run: |
+#         TAG_NAME=${{ steps.current.outputs.version }}
+#         echo "::set-output name=tag-name::$TAG_NAME"
+#         echo "This release will be tagged as $TAG_NAME"
+#         git config user.name "github-actions"
+#         git config user.email "actions@users.noreply.github.com"
+#         git tag --annotate --message="Automated tagging system" $TAG_NAME ${{ github.sha }}
+#     - name: Push the tag
+#       if: (steps.current.outputs.version != steps.published.outputs.version)
+#       env:
+#         TAG_NAME: ${{ steps.current.outputs.version }}
+#       run: |
+#         if [[ ${{ github.ref_name }} == 'main' ]]; then
+#           git push origin $TAG_NAME
+#         else
+#           echo "If this was the main branch, I would push a new tag named $TAG_NAME"
+#         fi

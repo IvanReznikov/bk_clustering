@@ -1,4 +1,4 @@
-from utilities import load_save, metrics #method_comparison
+from utilities import load_save, metrics  # method_comparison
 import os
 from timeit import default_timer as timer
 from main import BurjKhalifaClustering
@@ -18,6 +18,7 @@ def run_multiple_datasets(
     n_clusters=None,
 ):
     result_dict = {}
+    pred_dict = {}
     for idx, dataset_name in enumerate(dataset_names):
         try:
             start = timer()
@@ -42,9 +43,12 @@ def run_multiple_datasets(
             result_dict[dataset_name] = load_save.format_results(
                 error_results, timer() - start
             )
+            pred_dict[dataset_name] = load_save.encode_json(predict_labels)
         except Exception as e:
             print(e)
-
+    load_save.save_json(
+        pred_dict, "./../results/predictions/bk_clustering_predictions.json"
+    )
     return result_dict
 
 
@@ -77,11 +81,11 @@ def run_batch():
     ]
 
     # run bk_clustering
-    """
+
     results = run_multiple_datasets(dataset_names)
     filename = f"./../results/bk_clustering_results.json"  # Define the filename to save the results
     load_save.save_json(results, filename)  # Save the results to a JSON file
-    """
+
     # method_comparison.run_birch(dataset_names, number_of_clusters)
     # method_comparison.run_dbscan(dataset_names, number_of_clusters)
     # method_comparison.run_kmeans(dataset_names, number_of_clusters)

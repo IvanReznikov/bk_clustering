@@ -3,6 +3,8 @@
 The `bk_clustering` package is a Python realization of the Burj Khalifa clustering method.
 The Burj Khalifa method can be considered as Agglomerative clustering on steroids: great quality with no parameters required!
 
+The idea is to automatically detect solid clusters, based on the dendrogram. Read more in the publication section.
+
 ## Installation
 To install the package, run:
 ```python
@@ -25,10 +27,10 @@ labels = bk_model.labels_
 ```
 
 ## Examples
-[Iris Dataset](https://github.com/IvanReznikov/bk_clustering/blob/main/examples/iris_dataset.ipynb)
-[Comparison with other clustering methods](https://github.com/IvanReznikov/bk_clustering/blob/main/examples/aggregation_dataset.ipynb)
-[Mall Customer Segmentation](https://github.com/IvanReznikov/bk_clustering/blob/main/examples/Mall%20Customer%20Segmentation.ipynb)
-[Bank Customer Segmentation](https://github.com/IvanReznikov/bk_clustering/blob/main/examples/Bank%20Customer%20Segmentation.ipynb)
+- [Iris Dataset](https://github.com/IvanReznikov/bk_clustering/blob/main/examples/iris_dataset.ipynb)
+- [Comparison with other clustering methods](https://github.com/IvanReznikov/bk_clustering/blob/main/examples/aggregation_dataset.ipynb)
+- [Mall Customer Segmentation](https://github.com/IvanReznikov/bk_clustering/blob/main/examples/Mall%20Customer%20Segmentation.ipynb)
+- [Bank Customer Segmentation](https://github.com/IvanReznikov/bk_clustering/blob/main/examples/Bank%20Customer%20Segmentation.ipynb)
 
 ## Time limitations
 The time complexity of distance-based algorithms typically depends on the number of data points, the number of features, and the number of clusters.

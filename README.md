@@ -1,4 +1,4 @@
-![Logo](https://github.com/IvanReznikov/bk_clustering/blob/main/docs/images/logo_white.png?raw=true)
+![Logo](https://github.com/IvanReznikov/bk_clustering/blob/main/docs/images/logo_black.png?raw=true)
 # Burj Khalifa Clustering
 The `bk_clustering` package is a Python realization of the Burj Khalifa clustering method.
 The Burj Khalifa method can be considered as Agglomerative clustering on steroids: great quality with no parameters required!

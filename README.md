@@ -36,7 +36,8 @@ Building a distance matrix for hierarchical clustering is essential in the clust
 As the data size increases, the time complexity of distance computation snowballs, making these algorithms computationally expensive.
 Below are time performance matrixes attached for 10 and 100 clusters.
 ![Time performance](https://github.com/IvanReznikov/bk_clustering/blob/main/docs/images/time_performance.png?raw=true)
-As one can see, even with 10.000^2 data points, the algorithm works with acceptable timings.
+As one can see, even with 10.000^2 data points, the algorithm works with acceptable timings (just a bit longer than 10 minutes).
+[Performance notebook](https://github.com/IvanReznikov/bk_clustering/blob/main/examples/Performance%20testing.ipynb)
 Further work will be dedicated to optimizing python code and parallelizing some steps.
 
 ## Contributing

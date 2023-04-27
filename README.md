@@ -30,8 +30,14 @@ labels = bk_model.labels_
 [Comparison with other clustering methods](https://github.com/IvanReznikov/bk_clustering/blob/main/examples/aggregation_dataset.ipynb)
 [Mall Customer Segmentation](https://github.com/IvanReznikov/bk_clustering/blob/main/examples/Customer%20segmentation%20example.ipynb)
 
-## Limitations
-The method is distance-based so time performance might not be so great.
+## Time limitations
+The time complexity of distance-based algorithms typically depends on the number of data points, the number of features, and the number of clusters.
+Building a distance matrix for hierarchical clustering is essential in the clustering process. The size of the distance matrix is N x N, where N is the number of data points in the dataset. The time complexity of building the distance matrix for hierarchical clustering is O(N^2), which means that the time required to compute the pairwise distances between all data points increases quadratically with the size of the dataset.
+As the data size increases, the time complexity of distance computation snowballs, making these algorithms computationally expensive.
+Below are time performance matrixes attached for 10 and 100 clusters.
+![Time performance](https://github.com/IvanReznikov/bk_clustering/blob/main/docs/images/time_performance.png?raw=true)
+As one can see, even with 10.000^2 data points, the algorithm works with acceptable timings.
+Further work will be dedicated to optimizing python code and parallelizing some steps.
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a pull request or open an issue on the GitHub repository.

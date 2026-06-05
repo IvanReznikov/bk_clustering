@@ -12,7 +12,11 @@ def preprocessing(df: pd.DataFrame) -> pd.DataFrame:
     Return:
         df: pd.DataFrame - preprocessed pandas dataFrame
     """
-    df = df.apply(pd.to_numeric, errors="ignore")
+    for col in df.columns:
+        try:
+            df[col] = pd.to_numeric(df[col])
+        except (ValueError, TypeError):
+            pass
     df = string_handling(df)
     df = numeric_handling(df)
     df = df.dropna(axis=1)
@@ -41,7 +45,7 @@ def numeric_handling(df: pd.DataFrame) -> pd.DataFrame:
             df = pd.concat([numeric_df, df["class"]], axis=1)
         else:
             df = numeric_df
-        df["class"].fillna(-1, inplace=True)
+        df["class"] = df["class"].fillna(-1)
     else:
         df = numeric_df
     return df
@@ -68,9 +72,12 @@ def string_handling(
     """
     for col in df.select_dtypes("object"):
         # check for binary values
-        _col = df[col].str.decode(decoder)
-        if not _col.isnull().all():
-            df[col] = _col
+        try:
+            _col = df[col].str.decode(decoder)
+            if not _col.isnull().all():
+                df[col] = _col
+        except (AttributeError, TypeError):
+            pass
 
         # dummy encoding
         if (

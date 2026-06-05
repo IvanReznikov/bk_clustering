@@ -21,8 +21,9 @@ def read_arff(
     """
     try:
         # Load ARFF data using scipy_arff and create a pandas DataFrame
-        data = scipy_arff.loadarff(f"../data/{folder}/{filename}.arff")
-        df = pd.DataFrame(data[0])
+        with open(f"../data/{folder}/{filename}.arff", "r", encoding="utf-8") as f:
+            data = scipy_arff.loadarff(f)
+            df = pd.DataFrame(data[0])
     except NotImplementedError:
         data = []
         for x in arff.load(f"../data/{folder}/{filename}.arff"):

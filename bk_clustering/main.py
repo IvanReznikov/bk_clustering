@@ -103,6 +103,7 @@ class BurjKhalifaClustering:
             cluster_df = method_dict[linkage]["cluster_df"]
             cluster_info = method_dict[linkage]["cluster_info"]
             node_tree = method_dict[linkage]["node_tree"]
+            average_solidity = method_dict[linkage]["average_solidity"]
 
             self.linkage = linkage
         # If linkage_type is provided, calculate clusters for the given linkage_type
@@ -114,6 +115,15 @@ class BurjKhalifaClustering:
                 cluster_info,
                 node_tree,
             ) = self.calculate_clusters(X, linkage_type=self.linkage)
+            average_solidity = sum(
+                [
+                    (
+                        Counter(result_dict.values())[x]
+                        * cluster_info[x]["solidity"]
+                    )
+                    for x in set(result_dict.values())
+                ]
+            )
 
         self.labels_ = postprocessing.convert_to_array(result_dict.values())
         self.n_clusters = len(set(self.labels_))
@@ -121,6 +131,8 @@ class BurjKhalifaClustering:
         self.cluster_info_ = cluster_info
         self.cluster_df_ = cluster_df
         self.node_tree_ = node_tree
+        self.average_solidity_ = average_solidity
+        self.result_dict_ = result_dict
 
         return self
 

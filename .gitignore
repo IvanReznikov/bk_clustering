@@ -3,6 +3,7 @@ data/cifar10
 data/cifar10small
 gisette.zip
 mnistrotationbackimagenew.zip
+legacy
 
 results/predictions
 
